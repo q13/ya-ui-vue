@@ -1,0 +1,24 @@
+{
+  "name": "ya-ui-vue",
+  "version": "1.0.0",
+  "description": "A UI toolkit for Yazuo base on vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "element-ui": "^1.4.6",
+    "mint-ui": "^2.2.9"
+  },
+  "keywords": [
+    "UI",
+    "toolkit",
+    "vue.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/q13/ya-ui-vue.git"
+  },
+  "author": "13",
+  "license": "MIT"
+}

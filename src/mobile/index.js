@@ -1,0 +1,40 @@
+/**
+ * 简单暴露mint ui组件接口
+ */
+const version = '1.0.0';
+export {
+  install,
+  Header,
+  Button,
+  Cell,
+  CellSwipe,
+  Field,
+  Badge,
+  Switch,
+  Spinner,
+  TabItem,
+  TabContainerItem,
+  TabContainer,
+  Navbar,
+  Tabbar,
+  Search,
+  Checklist,
+  Radio,
+  Loadmore,
+  Actionsheet,
+  Popup,
+  Swipe,
+  SwipeItem,
+  Range,
+  Picker,
+  Progress,
+  Toast,
+  Indicator,
+  MessageBox,
+  InfiniteScroll,
+  Lazyload,
+  DatetimePicker,
+  IndexList,
+  IndexSection,
+  PaletteButton
+} from 'mint-ui';
