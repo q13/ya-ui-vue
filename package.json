@@ -1,6 +1,6 @@
 {
   "name": "ya-ui-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A UI toolkit for Yazuo base on vue.js",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "element-ui": "^1.4.6",
-    "mint-ui": "^2.2.9"
+    "mint-ui": "^2.2.9",
+    "vue": "^2.4.4"
   },
   "keywords": [
     "UI",
