@@ -1,4 +1,7 @@
-// import Vue from 'vue';
-import Button from 'element-ui/lib/button';
-import Button from 'element-ui/lib/theme-default/button';
-export default Button;
+import Vue from 'vue';
+import './theme-default/base.css';
+import './theme-default/index.css';
+import './theme-default/dialog.css';
+import Dialog from 'element-ui/lib/dialog';
+Vue.component(Dialog.name, Dialog);
+export default Dialog;
