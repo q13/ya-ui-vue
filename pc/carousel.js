@@ -3,5 +3,8 @@ import './theme-default/base.css';
 import './theme-default/index.css';
 import './theme-default/carousel.css';
 import Carousel from 'element-ui/lib/carousel';
-Vue.component(Carousel.name, Carousel);
+import {
+  replaceComponentPrefix
+} from '../src/deps/utils';
+Vue.component(replaceComponentPrefix(Carousel.name, 'el-', 'y-'), Carousel);
 export default Carousel;

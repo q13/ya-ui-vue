@@ -3,5 +3,8 @@ import './theme-default/base.css';
 import './theme-default/index.css';
 import './theme-default/submenu.css';
 import Submenu from 'element-ui/lib/submenu';
-Vue.component(Submenu.name, Submenu);
+import {
+  replaceComponentPrefix
+} from '../src/deps/utils';
+Vue.component(replaceComponentPrefix(Submenu.name, 'el-', 'y-'), Submenu);
 export default Submenu;

@@ -3,5 +3,8 @@ import './theme-default/base.css';
 import './theme-default/index.css';
 import './theme-default/col.css';
 import Col from 'element-ui/lib/col';
-Vue.component(Col.name, Col);
+import {
+  replaceComponentPrefix
+} from '../src/deps/utils';
+Vue.component(replaceComponentPrefix(Col.name, 'el-', 'y-'), Col);
 export default Col;

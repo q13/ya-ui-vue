@@ -3,5 +3,8 @@ import './theme-default/base.css';
 import './theme-default/index.css';
 import './theme-default/table.css';
 import Table from 'element-ui/lib/table';
-Vue.component(Table.name, Table);
+import {
+  replaceComponentPrefix
+} from '../src/deps/utils';
+Vue.component(replaceComponentPrefix(Table.name, 'el-', 'y-'), Table);
 export default Table;

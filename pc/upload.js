@@ -3,5 +3,8 @@ import './theme-default/base.css';
 import './theme-default/index.css';
 import './theme-default/upload.css';
 import Upload from 'element-ui/lib/upload';
-Vue.component(Upload.name, Upload);
+import {
+  replaceComponentPrefix
+} from '../src/deps/utils';
+Vue.component(replaceComponentPrefix(Upload.name, 'el-', 'y-'), Upload);
 export default Upload;
