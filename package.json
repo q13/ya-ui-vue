@@ -1,6 +1,6 @@
 {
   "name": "ya-ui-vue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A UI toolkit for Yazuo base on vue.js",
   "main": "index.js",
   "scripts": {
