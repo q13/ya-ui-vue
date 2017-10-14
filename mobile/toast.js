@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/toast.css';
 import Toast from 'mint-ui/lib/toast';
 import {
   replaceComponentPrefix

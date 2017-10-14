@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/range.css';
 import Range from 'mint-ui/lib/range';
 import {
   replaceComponentPrefix

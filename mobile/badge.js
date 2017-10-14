@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/badge.css';
 import Badge from 'mint-ui/lib/badge';
 import {
   replaceComponentPrefix

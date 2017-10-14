@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/swipe.css';
 import Swipe from 'mint-ui/lib/swipe';
 import {
   replaceComponentPrefix

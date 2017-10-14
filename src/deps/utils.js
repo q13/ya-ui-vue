@@ -9,7 +9,7 @@ export function replaceComponentPrefix(name, prefix1, prefix2) {
     prefix1 = 'El';
   }
   if (prefix2 === 'y-') {
-    prefix1 = 'Y';
+    prefix2 = 'Y';
   }
   return name.replace(prefix1, prefix2);
 };

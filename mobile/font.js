@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/font.css';
 import Font from 'mint-ui/lib/font';
 import {
   replaceComponentPrefix

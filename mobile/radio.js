@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/radio.css';
 import Radio from 'mint-ui/lib/radio';
 import {
   replaceComponentPrefix

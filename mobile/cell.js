@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/cell.css';
 import Cell from 'mint-ui/lib/cell';
 import {
   replaceComponentPrefix

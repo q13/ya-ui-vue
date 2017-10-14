@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/checklist.css';
 import Checklist from 'mint-ui/lib/checklist';
 import {
   replaceComponentPrefix

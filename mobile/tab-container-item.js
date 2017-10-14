@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/tab-container-item.css';
 import TabContainerItem from 'mint-ui/lib/tab-container-item';
 import {
   replaceComponentPrefix

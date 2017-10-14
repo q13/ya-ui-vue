@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/navbar.css';
 import Navbar from 'mint-ui/lib/navbar';
 import {
   replaceComponentPrefix

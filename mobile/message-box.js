@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/message-box.css';
 import MessageBox from 'mint-ui/lib/message-box';
 import {
   replaceComponentPrefix

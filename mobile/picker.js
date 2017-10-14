@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/picker.css';
 import Picker from 'mint-ui/lib/picker';
 import {
   replaceComponentPrefix

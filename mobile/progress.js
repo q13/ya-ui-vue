@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/progress.css';
 import Progress from 'mint-ui/lib/progress';
 import {
   replaceComponentPrefix

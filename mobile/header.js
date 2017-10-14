@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/header.css';
 import Header from 'mint-ui/lib/header';
 import {
   replaceComponentPrefix

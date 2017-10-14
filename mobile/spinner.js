@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/spinner.css';
 import Spinner from 'mint-ui/lib/spinner';
 import {
   replaceComponentPrefix

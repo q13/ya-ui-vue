@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/cell-swipe.css';
 import CellSwipe from 'mint-ui/lib/cell-swipe';
 import {
   replaceComponentPrefix

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/popup.css';
 import Popup from 'mint-ui/lib/popup';
 import {
   replaceComponentPrefix

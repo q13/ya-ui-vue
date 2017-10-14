@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import './theme-default/button.css';
-import DatetimePicker from 'mint-ui/lib/button';
+import './theme-default/datetime-picker.css';
+import DatetimePicker from 'mint-ui/lib/datetime-picker';
 import {
   replaceComponentPrefix
 } from '../src/deps/utils';

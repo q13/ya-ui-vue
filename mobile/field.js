@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/field.css';
 import Field from 'mint-ui/lib/field';
 import {
   replaceComponentPrefix

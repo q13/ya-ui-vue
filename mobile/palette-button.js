@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/palette-button.css';
 import PaletteButton from 'mint-ui/lib/palette-button';
 import {
   replaceComponentPrefix

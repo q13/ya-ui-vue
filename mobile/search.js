@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/search.css';
 import Search from 'mint-ui/lib/search';
 import {
   replaceComponentPrefix

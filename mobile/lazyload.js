@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/lazyload.css';
 import Lazyload from 'mint-ui/lib/lazyload';
 import {
   replaceComponentPrefix

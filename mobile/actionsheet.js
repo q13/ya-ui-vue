@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/actionsheet.css';
 import Actionsheet from 'mint-ui/lib/actionsheet';
 import {
   replaceComponentPrefix

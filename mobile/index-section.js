@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import './theme-default/button.css';
+import './theme-default/index-section.css';
 import IndexSection from 'mint-ui/lib/index-section';
 import {
   replaceComponentPrefix
