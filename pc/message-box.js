@@ -6,9 +6,9 @@ import MessageBox from 'element-ui/lib/message-box';
 import {
   replaceComponentPrefix
 } from '../src/deps/utils';
-Vue.component(replaceComponentPrefix(MessageBox.name, 'el-', 'y-'), MesageBox);
+Vue.component(replaceComponentPrefix(MessageBox.name, 'el-', 'y-'), MessageBox);
 // Vue.prototype.$msgbox = MessageBox;
 // Vue.prototype.$alert = MessageBox.alert;
 // Vue.prototype.$confirm = MessageBox.confirm;
 // Vue.prototype.$prompt = MessageBox.prompt;
-export default MesageBox;
+export default MessageBox;
