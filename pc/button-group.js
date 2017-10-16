@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import './theme-default/base.css';
 import './theme-default/index.css';
-import './theme-default/button-group';
+import './theme-default/button-group.css';
 import ButtonGroup from 'element-ui/lib/button-group';
 import {
   replaceComponentPrefix
