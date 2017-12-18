@@ -46,8 +46,6 @@ const Popup = Vue.component('m-popup', {
           this.bodyOverflow = null;
           this.bodyPaddingRight = null;
           if (this.winScrollTop !== -1) {
-            window.scrollTo(0, this.winScrollTop);
-            this.winScrollTop = -1;
             const childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
             childNodes.some((node) => {
               if (node.style && node.tagName === 'DIV') { // 只找第一个div
@@ -56,6 +54,8 @@ const Popup = Vue.component('m-popup', {
                 return true;
               }
             });
+            window.scrollTo(0, this.winScrollTop);
+            this.winScrollTop = -1;
           }
         }, 100);
       }
