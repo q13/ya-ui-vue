@@ -10,7 +10,10 @@
     "element-ui": "^2.0.11",
     "mint-ui": "^2.2.9",
     "vue": "^2.4.4",
-    "vue-echarts": "2.6.0"
+    "@antv/g2": "^3.0.0",
+    "@antv/g6": "^1.2.3",
+    "@antv/f2": "^3.0.0",
+    "@antv/data-set": "^0.8.3"
   },
   "keywords": [
     "UI",
