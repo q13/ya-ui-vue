@@ -6,29 +6,24 @@ import {
   Chart
 } from '@antv/g2';
 
-async function test () {
-
-}
 // 图表默认配置项
 const cfg = {
   width: {
     type: Number,
-    default: 0
+    default: 500
   },
   height: {
     type: Number,
-    default: 0
+    default: 500
   },
   padding: {
     default: 'auto'
   },
   background: {
-    type: Object,
-    default: {}
+    type: Object
   },
   plotBackground: {
-    type: Object,
-    default: {}
+    type: Object
   },
   forceFit: {
     type: Boolean,
@@ -42,33 +37,58 @@ const cfg = {
     type: Number
   },
   data: {
-    default: []
+    default() {
+      return [];
+    }
   }
 };
 
-const G2 = Vue.component('g2', {
+const ChartVue = Vue.component('y-chart', {
   props: {
-    options: {
-      type: Object,
-      default: {} // 默认配置项
-    },
-    ...cfg
+    ...cfg,
+    onDraw: {
+      type: Function,
+      default: function (graph) {
+        graph.render(); // 默认图表渲染
+      }
+    }
   },
+  data() {
+    return {
+      graphData: null // 保存最近一次graph数据，在下次rerender时可以取用
+    };
+  },
+  // template: '<div><div ref="container"></div>{{ padding.top }}</div>',
   render(h) {
     return h('div', {
       ref: 'container'
     });
   },
   watch: {
-    options() {
-      // recreate chart
-      this.createChart();
-    }
+    ...Object.keys(cfg).reduce((pv, cv) => {
+      if (cv !== 'data') { // 排除data
+        return {
+          ...pv,
+          [cv]: {
+            handler() {
+              // 防止同时改变多个attr引发多次create行为
+              clearTimeout(this.createGraphTid);
+              this.createGraphTid = setTimeout(() => {
+                this.createGraph();
+              }, 0);
+            },
+            deep: true // 深度watch
+          }
+        };
+      } else {
+        return pv;
+      }
+    }, {})
   },
   methods: {
-    getChartOptions() {
+    getGraphOptions() {
       // 获取merged图表配置项
-      let chartOptions = Object.keys(cfg).reduce((pv, cv) => {
+      let options = Object.keys(cfg).reduce((pv, cv) => {
         if (typeof this[cv] !== 'undefined') {
           return {
             ...pv,
@@ -78,31 +98,87 @@ const G2 = Vue.component('g2', {
           return pv;
         }
       }, {});
-      // options 配置的优先级高
-      return {
-        ...chartOptions,
-        ...this.options
-      };
+      if (this.graphData) {
+        options.data = this.graphData;
+      }
+      return options;
     },
     /**
-     * 创建chart
+     * 创建graph
      */
-    createChart() {
-      if (this.chart) { // 先销毁原来的chart
-        this.chart.destroy();
-      }
-      const chartOptions = this.getChartOptions();
-      // 保存引用
+    createGraph() {
       const container = this.$refs.container;
-      this.chart = new Chart({
+      if (this.core) { // 先销毁原来的graph
+        this.core.destroy();
+      }
+      const options = this.getGraphOptions();
+      // 保存引用
+      this.core = new Chart({
         container,
-        ...chartOptions
+        ...options
       });
+      // 绑定事件
+      this.bindEvents();
+      // 执行绘制
+      this.onDraw(this.core);
+    },
+    /**
+     * 绑定事件
+     */
+    bindEvents() {
+      const listeners = this.$listeners;
+      const core = this.core;
+      Object.keys(listeners).forEach((evtType) => {
+        core.on(evtType, listeners[evtType]); // 图表事件注册
+      });
+    },
+    /**
+     * 代理graph off方法
+     */
+    off(...args) {
+      const core = this.core;
+      core.off.apply(core, args);
+    },
+    /**
+     * 封装g2方法
+     */
+    graph(method, ...args) {
+      const core = this.core;
+      if (!core) {
+        console.error('Graph not render');
+      } else {
+        const fn = core[method];
+        if (!fn) {
+          console.warn('There is no ' + method + ' on graph');
+        } else {
+          const result = fn.apply(core, args);
+          if (method === 'source' || method === 'changeData') { // 保留最近一次data引用
+            this.graphData = args[0];
+            if (method === 'source') {
+              // 执行绘制
+              this.onDraw(this.core);
+            }
+          }
+          return result;
+        }
+      }
     }
   },
   mounted() {
-    this.createChart();
+    this.createGraph();
+  },
+  destroyed() {
+    // 销毁事宜
+    clearTimeout(this.createGraphTid);
+    this.createGraphTid = null;
+    if (this.core) {
+      this.core.off();
+      this.core.destroy();
+      this.core = null;
+    }
   }
 });
 
-export default G2;
+export default ChartVue;
+
+export * from '@antv/g2';
