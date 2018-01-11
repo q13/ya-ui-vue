@@ -29,6 +29,12 @@ const cfg = {
 
 const ChartVue = Vue.component('m-chart', {
   props: {
+    configs: {
+      type: Object,
+      default() {
+        return {};
+      }
+    },
     ...cfg,
     onDraw: {
       type: Function,
@@ -49,7 +55,7 @@ const ChartVue = Vue.component('m-chart', {
     });
   },
   watch: {
-    ...Object.keys(cfg).reduce((pv, cv) => {
+    ...Object.keys(cfg).concat('configs').reduce((pv, cv) => {
       if (cv !== 'data') { // 排除data
         return {
           ...pv,
@@ -70,9 +76,9 @@ const ChartVue = Vue.component('m-chart', {
     }, {})
   },
   methods: {
-    getGraphOptions() {
+    getGraphConfigs() {
       // 获取merged图表配置项
-      let options = Object.keys(cfg).reduce((pv, cv) => {
+      let configs = Object.keys(cfg).reduce((pv, cv) => {
         if (typeof this[cv] !== 'undefined') {
           return {
             ...pv,
@@ -82,7 +88,12 @@ const ChartVue = Vue.component('m-chart', {
           return pv;
         }
       }, {});
-      return options;
+      // this.configs优先级更高
+      configs = {
+        ...configs,
+        ...this.configs
+      };
+      return configs;
     },
     /**
      * 创建graph
@@ -92,11 +103,11 @@ const ChartVue = Vue.component('m-chart', {
       if (this.core) { // 先销毁原来的graph
         this.core.destroy();
       }
-      const options = this.getGraphOptions();
+      const configs = this.getGraphConfigs();
       // 保存引用
       this.core = new Chart({
         el: container,
-        ...options
+        ...configs
       });
       // 绑定事件
       this.bindEvents();

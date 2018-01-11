@@ -45,10 +45,16 @@ const cfg = {
 
 const ChartVue = Vue.component('y-chart', {
   props: {
+    configs: {
+      type: Object,
+      default() {
+        return {};
+      }
+    },
     ...cfg,
     onDraw: {
       type: Function,
-      default: function (graph) {
+      default(graph) {
         graph.render(); // 默认图表渲染
       }
     }
@@ -65,7 +71,7 @@ const ChartVue = Vue.component('y-chart', {
     });
   },
   watch: {
-    ...Object.keys(cfg).reduce((pv, cv) => {
+    ...Object.keys(cfg).concat('configs').reduce((pv, cv) => {
       if (cv !== 'data') { // 排除data
         return {
           ...pv,
@@ -86,9 +92,9 @@ const ChartVue = Vue.component('y-chart', {
     }, {})
   },
   methods: {
-    getGraphOptions() {
+    getGraphConfigs() {
       // 获取merged图表配置项
-      let options = Object.keys(cfg).reduce((pv, cv) => {
+      let configs = Object.keys(cfg).reduce((pv, cv) => {
         if (typeof this[cv] !== 'undefined') {
           return {
             ...pv,
@@ -98,10 +104,15 @@ const ChartVue = Vue.component('y-chart', {
           return pv;
         }
       }, {});
+      // this.configs优先级更高
+      configs = {
+        ...configs,
+        ...this.configs
+      };
       if (this.graphData) {
-        options.data = this.graphData;
+        configs.data = this.graphData;
       }
-      return options;
+      return configs;
     },
     /**
      * 创建graph
@@ -111,11 +122,11 @@ const ChartVue = Vue.component('y-chart', {
       if (this.core) { // 先销毁原来的graph
         this.core.destroy();
       }
-      const options = this.getGraphOptions();
+      const configs = this.getGraphConfigs();
       // 保存引用
       this.core = new Chart({
         container,
-        ...options
+        ...configs
       });
       // 绑定事件
       this.bindEvents();
