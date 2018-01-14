@@ -1,12 +1,8 @@
 /**
- * pc和mobile转接
+ * 作为外部库引用
  */
-import pc from './src/pc/index';
-import mobile from './src/mobile/index';
-export default function ui(type='pc') {
-  if (type === 'pc') {
-    return null;
-  } else if (type === 'mobile') {
-    return null;
-  }
+import elementUi from './ui/element-ui/src/index';
+
+export {
+  elementUi
 };
