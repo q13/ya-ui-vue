@@ -20,7 +20,7 @@ function getBaseConfig(configName) {
           options: {
             presets: [
               ['env', {
-                // modules: false, // 设置ES6 模块转译的模块格式 默认是 commonjs
+                modules: false, // 处理ES6模块转译后的模块格式 默认是 commonjs, 设置为false代表不处理包转换，由webpack处理
                 targets: {
                   browsers: ['> 1%', 'last 2 versions', 'last 3 iOS versions', 'not ie <= 8', 'Android >= 4.0']
                 },

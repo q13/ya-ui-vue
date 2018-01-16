@@ -90,42 +90,34 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 /***/ }),
 
 /***/ 173:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _vue = __webpack_require__(0);
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _switch = __webpack_require__(174);
-
-var _switch2 = _interopRequireDefault(_switch);
-
-var _utils = __webpack_require__(1);
-
-var _shim = __webpack_require__(175);
-
-var _shim2 = _interopRequireDefault(_shim);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_switch__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_switch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_element_ui_lib_switch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(175);
 
 /**
  * Button proxy
  * by 13
  */
-var NewCtor = (0, _shim2.default)(_switch2.default); // 加垫片
-// 替换组件前缀
-(0, _utils.replaceElementUiComponentPrefix)(NewCtor);
-// 自动注册组件
-_vue2.default.component(NewCtor.name, NewCtor);
 
-exports.default = NewCtor;
+
+
+
+
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_element_ui_lib_switch___default.a); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceElementUiComponentPrefix"])(NewCtor);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.name, NewCtor);
+
+/* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
 
@@ -137,14 +129,9 @@ module.exports = require("element-ui/lib/switch");
 /***/ }),
 
 /***/ 175:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
 /**
  * 垫片侵入
@@ -154,7 +141,7 @@ function shim(Ctor) {
   // 扩展
   return Ctor;
 }
-exports.default = shim;
+/* harmony default export */ __webpack_exports__["a"] = (shim);
 
 /***/ })
 

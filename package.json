@@ -8,6 +8,7 @@
     "code": "node tools/bin/code.js",
     "lib": "node tools/bin/lib.js",
     "dist": "webpack --config tools/webpack.dist.config.js",
+    "graph": "webpack --config tools/webpack.graph.config.js",
     "example": "webpack-dev-server --config tools/webpack.example.config.js"
   },
   "dependencies": {
