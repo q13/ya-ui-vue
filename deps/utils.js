@@ -80,6 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceElementUiComponentPrefix", function() { return replaceElementUiComponentPrefix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceMintUiComponentPrefix", function() { return replaceMintUiComponentPrefix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceComponentPrefix", function() { return replaceComponentPrefix; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
@@ -106,7 +107,8 @@ function replaceComponentPrefix(name, prefix1, prefix2) {
  */
 function getProperComponentPrefix(libName) {
   var libPrefix = Object.assign({ // 库前缀自定义
-    'element-ui': 'el'
+    'element-ui': 'el',
+    'mint-ui': 'mt'
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
@@ -118,6 +120,17 @@ function replaceElementUiComponentPrefix(Ctor) {
   var name = Ctor.name;
   var newName = name.slice(2);
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
+/**
+ * 替换mint-ui组件前缀
+ */
+function replaceMintUiComponentPrefix(Ctor) {
+  var libPrefix = getProperComponentPrefix('mint-ui');
+  var name = Ctor.name;
+  var newName = name.slice(3);
+  newName = libPrefix + '-' + newName;
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }

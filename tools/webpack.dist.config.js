@@ -40,6 +40,12 @@ module.exports = mergeWith({}, getBaseConfig('dist'), {
         }],
         fallback: 'style-loader'
       })
+    }, {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
     }]
   },
   plugins: [

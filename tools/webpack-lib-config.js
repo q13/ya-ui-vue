@@ -11,9 +11,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 // 获取库独特配置
-const configs = {
-  'element-ui': require('./configs/element-ui')
-};
+// const configs = {
+//   'element-ui': require('./configs/element-ui')
+// };
 
 const {
   logger
@@ -95,6 +95,9 @@ function build() {
       const extractSass = new ExtractTextPlugin({
         filename: 'index.css'
       });
+      const extractCss = new ExtractTextPlugin({
+        filename: 'index.css'
+      });
       const entry = path.resolve(srcPath, 'themes', themeName, 'index.js');
       // run webpack
       const compiler = webpack(mergeWith({}, getBaseConfig('lib'), {
@@ -105,6 +108,12 @@ function build() {
         },
         module: {
           rules: [{
+            test: /\.css$/,
+            use: extractCss.extract({
+              fallback: 'style-loader',
+              use: 'css-loader'
+            })
+          }, {
             test: /\.scss$/,
             use: extractSass.extract({
               use: [{
@@ -122,7 +131,7 @@ function build() {
             })
           }]
         },
-        plugins: [extractSass]
+        plugins: [extractSass, extractCss]
       }, (target, source) => {
         if (isArray(target)) {
           return target.concat(source);
@@ -168,7 +177,7 @@ function build() {
       plugins: [new CleanWebpackPlugin(['components'], {
         root: libPath
       })]
-    }, configs[libName].lib, (target, source) => {
+    }, (target, source) => {
       if (isArray(target)) {
         return target.concat(source);
       }

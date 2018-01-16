@@ -23,7 +23,8 @@ function replaceComponentPrefix(name, prefix1, prefix2) {
  */
 function getProperComponentPrefix(libName) {
   const libPrefix = Object.assign({ // 库前缀自定义
-    'element-ui': 'el'
+    'element-ui': 'el',
+    'mint-ui': 'mt'
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
@@ -38,7 +39,19 @@ function replaceElementUiComponentPrefix(Ctor) {
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }
+/**
+ * 替换mint-ui组件前缀
+ */
+function replaceMintUiComponentPrefix(Ctor) {
+  const libPrefix = getProperComponentPrefix('mint-ui');
+  const name = Ctor.name;
+  let newName = name.slice(3);
+  newName = libPrefix + '-' + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
 export {
   replaceElementUiComponentPrefix,
+  replaceMintUiComponentPrefix,
   replaceComponentPrefix
 };

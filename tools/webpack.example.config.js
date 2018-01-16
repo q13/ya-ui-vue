@@ -39,6 +39,12 @@ module.exports = mergeWith({}, getBaseConfig(), {
           sourceMap: true
         }
       }]
+    }, {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
     }]
   },
   externals: {
