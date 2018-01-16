@@ -1,10 +1,10 @@
 /**
  * element-ui 示例
  */
-
-import '../../../ui/element-ui/src/components/button/styling';
-import '../../../ui/element-ui/src/components/select/styling';
-import '../../../ui/element-ui/src/components/option/styling';
+import '../../../ui/element-ui/themes/default/index.css';
+import '../../../ui/element-ui/components/button';
+import '../../../ui/element-ui/components/select';
+import '../../../ui/element-ui/components/option';
 
 export default function () {
   return {

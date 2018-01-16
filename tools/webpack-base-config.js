@@ -3,52 +3,12 @@
  */
 
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Prepare = require('./prepare');
 
 function getBaseConfig(configName) {
-  // sass/scss
-  const extractSass = new ExtractTextPlugin({
-    filename: '[name].[contenthash].css'
-  });
-  let scssRule = {
-    test: /\.scss$/,
-    use: [{
-      loader: 'style-loader',
-    }, {
-      loader: 'css-loader',
-      options: {
-        sourceMap: true
-      }
-    }, {
-      loader: 'sass-loader',
-      options: {
-        sourceMap: true
-      }
-    }]
-  };
-  if (configName === 'dist') {
-    scssRule = {
-      test: /\.scss$/,
-      use: extractSass.extract({
-        use: [{
-          loader: 'css-loader',
-          options: {
-            sourceMap: true
-          }
-        }, {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        }],
-        fallback: 'style-loader'
-      })
-    };
-  }
   return {
     output: {
-      library: 'ya',
+      // library: 'ya',
       libraryTarget: 'umd'
     },
     module: {
@@ -60,12 +20,12 @@ function getBaseConfig(configName) {
           options: {
             presets: [
               ['env', {
-                modules: false,
+                // modules: false, // 设置ES6 模块转译的模块格式 默认是 commonjs
                 targets: {
                   browsers: ['> 1%', 'last 2 versions', 'last 3 iOS versions', 'not ie <= 8', 'Android >= 4.0']
                 },
-                useBuiltIns: true,
-                loose: false
+                useBuiltIns: true, // 引入babel-polyfill会根据env设定去自动shim不支持的特性
+                loose: false // normal方式，参考 https://www.w3ctech.com/topic/1708
               }],
               'stage-0'
             ]
@@ -77,7 +37,7 @@ function getBaseConfig(configName) {
           'style-loader',
           'css-loader'
         ]
-      }, scssRule, {
+      }, {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader'
@@ -91,18 +51,14 @@ function getBaseConfig(configName) {
     },
     devtool: 'source-map',
     // externals: ['vue'],
-    externals: {
-      vue: {
-        commonjs: 'vue',
-        commonjs2: 'vue',
-        amd: 'vue',
-        root: 'Vue'
+    resolve: {
+      alias: {
+        'deps': path.resolve(__dirname, '../src/deps'), // 依赖目录
+        'ya-ui-vue': path.resolve(__dirname, '..') // 根目录
       }
     },
-    plugins: [
-      new Prepare(),
-      extractSass
-    ]
+    plugins: (configName === 'dist' ? [new Prepare()] : []).concat([
+    ])
   };
 }
 module.exports = getBaseConfig;

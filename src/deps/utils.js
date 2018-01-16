@@ -7,7 +7,7 @@ import {
  * @param {string} prefix1
  * @param {string} prefix2
  */
-export function replaceComponentPrefix(name, prefix1, prefix2) {
+function replaceComponentPrefix(name, prefix1, prefix2) {
   if (prefix1 === 'el-') {
     prefix1 = 'El';
   }
@@ -30,7 +30,7 @@ function getProperComponentPrefix(libName) {
 /**
  * 替换element-ui组件前缀
  */
-export function replaceElementUiComponentPrefix(Ctor) {
+function replaceElementUiComponentPrefix(Ctor) {
   const libPrefix = getProperComponentPrefix('element-ui');
   const name = Ctor.name;
   let newName = name.slice(2);
@@ -38,3 +38,7 @@ export function replaceElementUiComponentPrefix(Ctor) {
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }
+export {
+  replaceElementUiComponentPrefix,
+  replaceComponentPrefix
+};

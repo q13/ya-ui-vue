@@ -8,6 +8,7 @@ const {
   isArray
 } = require('lodash');
 const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const getBaseConfig = require('./webpack-base-config');
@@ -23,12 +24,45 @@ module.exports = mergeWith({}, getBaseConfig(), {
     path: BASE_DIST_PATH
   },
   module: {
+    rules: [{
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
+        }
+      }]
+    }]
+  },
+  externals: {
+    vue: {
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+      root: 'Vue'
+    },
+    lodash: { // 所有第三方库都走外部依赖
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    }
   },
   devServer: {
     contentBase: BASE_DIST_PATH,
     hot: true
   },
   plugins: [
+    new UglifyJSPlugin({
+      sourceMap: true
+    }),
     // 示例页面模板
     new HtmlWebpackPlugin({
       title: 'Example',

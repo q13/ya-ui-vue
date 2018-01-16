@@ -7,7 +7,7 @@ import Vue from 'vue';
 import Ctor from 'element-ui/lib/checkbox';
 import {
   replaceElementUiComponentPrefix
-} from '../../../../../src/deps/utils';
+} from 'deps/utils';
 import shim from './shim';
 
 const NewCtor = shim(Ctor); // 加垫片
