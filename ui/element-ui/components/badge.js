@@ -96,34 +96,42 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 /* 9 */,
 /* 10 */,
 /* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_badge__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui_lib_badge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_element_ui_lib_badge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(13);
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _vue = __webpack_require__(0);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+var _badge = __webpack_require__(12);
+
+var _badge2 = _interopRequireDefault(_badge);
+
+var _utils = __webpack_require__(1);
+
+var _shim = __webpack_require__(13);
+
+var _shim2 = _interopRequireDefault(_shim);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Button proxy
  * by 13
  */
-
-
-
-
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_element_ui_lib_badge___default.a); // 加垫片
+var NewCtor = (0, _shim2.default)(_badge2.default); // 加垫片
 // 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceElementUiComponentPrefix"])(NewCtor);
+(0, _utils.replaceElementUiComponentPrefix)(NewCtor);
 // 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.name, NewCtor);
+_vue2.default.component(NewCtor.name, NewCtor);
 
-/* harmony default export */ __webpack_exports__["default"] = (NewCtor);
+exports.default = NewCtor;
 
 /***/ }),
 /* 12 */
@@ -133,9 +141,14 @@ module.exports = require("element-ui/lib/badge");
 
 /***/ }),
 /* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 /**
  * 垫片侵入
@@ -145,7 +158,7 @@ function shim(Ctor) {
   // 扩展
   return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+exports.default = shim;
 
 /***/ })
 /******/ ]);

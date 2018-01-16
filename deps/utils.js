@@ -75,17 +75,23 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceElementUiComponentPrefix", function() { return replaceElementUiComponentPrefix; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceComponentPrefix", function() { return replaceComponentPrefix; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.replaceComponentPrefix = exports.replaceElementUiComponentPrefix = undefined;
+
+var _assign = __webpack_require__(1);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+var _lodash = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * 替换组件name前缀
@@ -108,7 +114,7 @@ function replaceComponentPrefix(name, prefix1, prefix2) {
  * @param {string} libName
  */
 function getProperComponentPrefix(libName) {
-  var libPrefix = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_assign___default()({ // 库前缀自定义
+  var libPrefix = (0, _assign2.default)({ // 库前缀自定义
     'element-ui': 'el'
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
@@ -120,11 +126,12 @@ function replaceElementUiComponentPrefix(Ctor) {
   var libPrefix = getProperComponentPrefix('element-ui');
   var name = Ctor.name;
   var newName = name.slice(2);
-  newName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + newName;
+  newName = (0, _lodash.upperFirst)(libPrefix) + newName;
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }
-
+exports.replaceElementUiComponentPrefix = replaceElementUiComponentPrefix;
+exports.replaceComponentPrefix = replaceComponentPrefix;
 
 /***/ }),
 /* 1 */
