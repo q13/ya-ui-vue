@@ -24,7 +24,9 @@ function replaceComponentPrefix(name, prefix1, prefix2) {
 function getProperComponentPrefix(libName) {
   const libPrefix = Object.assign({ // 库前缀自定义
     'element-ui': 'el',
-    'mint-ui': 'mt'
+    'mint-ui': 'mt',
+    'iview': 'i',
+    'vue-beauty': 'v'
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
@@ -50,8 +52,32 @@ function replaceMintUiComponentPrefix(Ctor) {
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }
+/**
+ * 替换iview组件前缀
+ */
+function replaceIviewComponentPrefix(Ctor) {
+  const libPrefix = getProperComponentPrefix('iview');
+  const name = Ctor.name;
+  let newName = name;
+  newName = upperFirst(libPrefix) + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
+/**
+ * 替换vue-beauty组件前缀
+ */
+function replaceVueBeautyComponentPrefix(Ctor) {
+  const libPrefix = getProperComponentPrefix('vue-beauty');
+  const name = Ctor.name;
+  let newName = name.slice(2);
+  newName = libPrefix + '-' + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
 export {
   replaceElementUiComponentPrefix,
   replaceMintUiComponentPrefix,
+  replaceIviewComponentPrefix,
+  replaceVueBeautyComponentPrefix,
   replaceComponentPrefix
 };

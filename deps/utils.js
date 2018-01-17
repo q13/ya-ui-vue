@@ -81,6 +81,8 @@ return /******/ (function(modules) { // webpackBootstrap
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceElementUiComponentPrefix", function() { return replaceElementUiComponentPrefix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceMintUiComponentPrefix", function() { return replaceMintUiComponentPrefix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceIviewComponentPrefix", function() { return replaceIviewComponentPrefix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceVueBeautyComponentPrefix", function() { return replaceVueBeautyComponentPrefix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceComponentPrefix", function() { return replaceComponentPrefix; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
@@ -108,7 +110,9 @@ function replaceComponentPrefix(name, prefix1, prefix2) {
 function getProperComponentPrefix(libName) {
   var libPrefix = Object.assign({ // 库前缀自定义
     'element-ui': 'el',
-    'mint-ui': 'mt'
+    'mint-ui': 'mt',
+    'iview': 'i',
+    'vue-beauty': 'v'
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
@@ -130,6 +134,28 @@ function replaceMintUiComponentPrefix(Ctor) {
   var libPrefix = getProperComponentPrefix('mint-ui');
   var name = Ctor.name;
   var newName = name.slice(3);
+  newName = libPrefix + '-' + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
+/**
+ * 替换iview组件前缀
+ */
+function replaceIviewComponentPrefix(Ctor) {
+  var libPrefix = getProperComponentPrefix('iview');
+  var name = Ctor.name;
+  var newName = name;
+  newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
+  Ctor.name = newName; // 替换成新的组件名
+  return Ctor;
+}
+/**
+ * 替换vue-beauty组件前缀
+ */
+function replaceVueBeautyComponentPrefix(Ctor) {
+  var libPrefix = getProperComponentPrefix('vue-beauty');
+  var name = Ctor.name;
+  var newName = name.slice(2);
   newName = libPrefix + '-' + newName;
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;

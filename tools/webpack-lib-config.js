@@ -98,6 +98,9 @@ function build() {
       const extractCss = new ExtractTextPlugin({
         filename: 'index.css'
       });
+      const extractLess = new ExtractTextPlugin({
+        filename: 'index.css'
+      });
       const entry = path.resolve(srcPath, 'themes', themeName, 'index.js');
       // run webpack
       const compiler = webpack(mergeWith({}, getBaseConfig('lib'), {
@@ -129,9 +132,20 @@ function build() {
               }],
               fallback: 'style-loader'
             })
+          }, {
+            test: /\.less$/,
+            use: extractLess.extract({
+              use: [{
+                loader: 'css-loader'
+              }, {
+                loader: 'less-loader'
+              }],
+              // use style-loader in development
+              fallback: 'style-loader'
+            })
           }]
         },
-        plugins: [extractSass, extractCss]
+        plugins: [extractSass, extractCss, extractLess]
       }, (target, source) => {
         if (isArray(target)) {
           return target.concat(source);
