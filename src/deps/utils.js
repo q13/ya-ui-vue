@@ -69,8 +69,8 @@ function replaceIviewComponentPrefix(Ctor) {
 function replaceVueBeautyComponentPrefix(Ctor) {
   const libPrefix = getProperComponentPrefix('vue-beauty');
   const name = Ctor.name;
-  let newName = name.slice(2);
-  newName = libPrefix + '-' + newName;
+  let newName = name;
+  newName = upperFirst(libPrefix) + newName;
   Ctor.name = newName; // 替换成新的组件名
   return Ctor;
 }
