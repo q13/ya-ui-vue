@@ -145,6 +145,9 @@ function replaceIviewComponentPrefix(Ctor) {
 function replaceVueBeautyComponentPrefix(Ctor) {
   var libPrefix = getProperComponentPrefix('vue-beauty');
   var name = Ctor.name;
+  if (name === 'Switch') {
+    Ctor.name = 'Switch_';
+  }
   var newName = name;
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
   Ctor.globalName = newName; // 替换成新的组件名
