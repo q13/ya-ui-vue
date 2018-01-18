@@ -7,7 +7,8 @@ const fs = require('fs');
 const glob = require('glob');
 const {
   camelCase,
-  capitalize
+  capitalize,
+  upperFirst
 } = require('lodash');
 const { logger } = require('../utils');
 
@@ -90,17 +91,19 @@ import './index.css';
 /**
  * 获取完整包引用模板
  */
-function getPackageTemplate() { 
-  return `
-/**
- * 完整引用
+function getPackageTemplate(cptNames) { 
+  return `/**
+ * 完整库引用
  * by 13
- */ 
-import Vue from 'vue';
-import vueBeauty from 'vue-beauty';
-Vue.use(vueBeauty);
-export default vueBeauty;
-`;
+ */
+` + cptNames.map((cptName) => {
+    const Ctor = upperFirst(camelCase(cptName));
+    return `
+import ${Ctor} from '../${cptName}/index';`;
+  }).join('') + '\nexport {\n' +
+  cptNames.map((cptName) => {
+    return '  ' + upperFirst(camelCase(cptName));
+  }).join(',\n') + '\n};\n';
 }
 
 function generateCode() {
@@ -150,7 +153,7 @@ function generateCode() {
     logger.info('vue-beauty: ' + name + ' created.');
   });
   // 创建完整包索引
-  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate(cptNames));
   logger.info('vue-beauty: component create done.');
 }
 

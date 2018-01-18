@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 46);
+/******/ 	return __webpack_require__(__webpack_require__.s = 44);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -89,18 +89,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ }),
 
-/***/ 46:
+/***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(46);
 
 /**
  * Button proxy
@@ -121,14 +121,14 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCto
 
 /***/ }),
 
-/***/ 47:
+/***/ 45:
 /***/ (function(module, exports) {
 
 module.exports = require("mint-ui/lib/lazyload/index");
 
 /***/ }),
 
-/***/ 48:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

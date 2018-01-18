@@ -5,6 +5,10 @@ const path = require('path');
 const fsExtra = require('fs-extra');
 const fs = require('fs');
 const glob = require('glob');
+const {
+  upperFirst,
+  camelCase
+} = require('lodash');
 const { logger } = require('../utils');
 
 const REF_PATH = path.resolve(__dirname, '..', '..', 'node_modules', 'element-ui');
@@ -83,17 +87,19 @@ import './index.scss';
 /**
  * 获取完整包引用模板
  */
-function getPackageTemplate() { 
-  return `
-/**
- * 完整引用
+function getPackageTemplate(cptNames) {
+  return `/**
+ * 完整库引用
  * by 13
- */ 
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-Vue.use(ElementUI);
-export default ElementUI;
-`;
+ */
+` + cptNames.map((cptName) => {
+    const Ctor = upperFirst(camelCase(cptName));
+    return `
+import ${Ctor} from '../${cptName}/index';`;
+  }).join('') + '\nexport {\n' +
+  cptNames.map((cptName) => {
+    return '  ' + upperFirst(camelCase(cptName));
+  }).join(',\n') + '\n};\n';
 }
 
 function generateCode() {
@@ -123,9 +129,10 @@ function generateCode() {
     return path.basename(name, '.js');
   });
   // 创建js文件
-  files.filter((name) => {
+  const cptNames = files.filter((name) => {
     return (name !== 'index' && name !== 'element-ui.common'); // 排除这两个index和element-ui.common文件
-  }).forEach((name) => {
+  });
+  cptNames.forEach((name) => {
     const tpls = getCptTemplate(name);
     const cptPath = path.resolve(SRC_PATH, 'components', name);
     // index
@@ -143,7 +150,7 @@ function generateCode() {
     logger.info('element-ui: ' + name + ' created.');
   });
   // 创建完整包索引
-  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate(cptNames));
   logger.info('element-ui: component create done.');
 }
 

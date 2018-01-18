@@ -5,6 +5,10 @@ const path = require('path');
 const fsExtra = require('fs-extra');
 const fs = require('fs');
 const glob = require('glob');
+const {
+  upperFirst,
+  camelCase
+} = require('lodash');
 const { logger } = require('../utils');
 
 const REF_PATH = path.resolve(__dirname, '..', '..', 'node_modules', 'mint-ui');
@@ -89,17 +93,19 @@ ${importCss}
 /**
  * 获取完整包引用模板
  */
-function getPackageTemplate() { 
-  return `
-/**
- * 完整引用
+function getPackageTemplate(cptNames) { 
+  return `/**
+ * 完整库引用
  * by 13
- */ 
-import Vue from 'vue';
-import MintUI from 'iview';
-Vue.use(MintUI);
-export default MintUI;
-`;
+ */
+` + cptNames.map((cptName) => {
+    const Ctor = upperFirst(camelCase(cptName));
+    return `
+import ${Ctor} from '../${cptName}/index';`;
+  }).join('') + '\nexport {\n' +
+  cptNames.map((cptName) => {
+    return '  ' + upperFirst(camelCase(cptName));
+  }).join(',\n') + '\n};\n';
 }
 
 function generateCode() {
@@ -150,7 +156,7 @@ function generateCode() {
     logger.info('mint-ui: ' + name + ' created.');
   });
   // 创建完整包索引
-  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate(cptNames));
   logger.info('mint-ui: component create done.');
 }
 

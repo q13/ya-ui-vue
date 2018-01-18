@@ -70,12 +70,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 75);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 76:
+/***/ 75:
 /***/ (function(module, exports) {
 
 throw new Error("Module build failed: SyntaxError: C:/Users/13/Project/ya-ui-vue/ui/vue-beauty/src/components/switch/index.js: switch is a reserved word (7:9)\n\n\u001b[0m \u001b[90m  5 | \u001b[39m\u001b[90m */\u001b[39m\n \u001b[90m  6 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mVue\u001b[39m from \u001b[32m'vue'\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[36mswitch\u001b[39m } from \u001b[32m'vue-beauty'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 | \u001b[39m\u001b[36mimport\u001b[39m {\n \u001b[90m  9 | \u001b[39m  replaceVueBeautyComponentPrefix\n \u001b[90m 10 | \u001b[39m} from \u001b[32m'deps/utils'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n");
