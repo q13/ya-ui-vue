@@ -3,97 +3,97 @@
  * by 13
  */
 
-import Affix from '../affix/index';
-import Alert from '../alert/index';
-import Avatar from '../avatar/index';
-import BackTop from '../back-top/index';
-import Badge from '../badge/index';
-import Breadcrumb from '../breadcrumb/index';
-import Button from '../button/index';
-import Card from '../card/index';
-import Carousel from '../carousel/index';
-import Cascader from '../cascader/index';
-import Checkbox from '../checkbox/index';
-import Collapse from '../collapse/index';
-import DataTable from '../data-table/index';
-import DatePicker from '../date-picker/index';
-import Dropdown from '../dropdown/index';
-import Form from '../form/index';
-import Grid from '../grid/index';
-import Icon from '../icon/index';
-import InputNumber from '../input-number/index';
-import Input from '../input/index';
-import Layout from '../layout/index';
-import Menu from '../menu/index';
-import Message from '../message/index';
-import Modal from '../modal/index';
-import MorePanel from '../more-panel/index';
-import Notification from '../notification/index';
-import Pagination from '../pagination/index';
-import Popconfirm from '../popconfirm/index';
-import Popover from '../popover/index';
-import Progress from '../progress/index';
-import Radio from '../radio/index';
-import Rate from '../rate/index';
-import Select from '../select/index';
-import Slider from '../slider/index';
-import Spin from '../spin/index';
-import Steps from '../steps/index';
-import Switch from '../switch/index';
-import Tabs from '../tabs/index';
-import Tag from '../tag/index';
-import TimePicker from '../time-picker/index';
-import Timeline from '../timeline/index';
-import Tooltip from '../tooltip/index';
-import Transfer from '../transfer/index';
-import TreeSelect from '../tree-select/index';
-import Tree from '../tree/index';
-import Upload from '../upload/index';
+import affix from '../affix/index';
+import alert from '../alert/index';
+import avatar from '../avatar/index';
+import backTop from '../back-top/index';
+import badge from '../badge/index';
+import breadcrumb from '../breadcrumb/index';
+import button from '../button/index';
+import card from '../card/index';
+import carousel from '../carousel/index';
+import cascader from '../cascader/index';
+import checkbox from '../checkbox/index';
+import collapse from '../collapse/index';
+import dataTable from '../data-table/index';
+import datePicker from '../date-picker/index';
+import dropdown from '../dropdown/index';
+import form from '../form/index';
+import grid from '../grid/index';
+import icon from '../icon/index';
+import inputNumber from '../input-number/index';
+import input from '../input/index';
+import layout from '../layout/index';
+import menu from '../menu/index';
+import message from '../message/index';
+import modal from '../modal/index';
+import morePanel from '../more-panel/index';
+import notification from '../notification/index';
+import pagination from '../pagination/index';
+import popconfirm from '../popconfirm/index';
+import popover from '../popover/index';
+import progress from '../progress/index';
+import radio from '../radio/index';
+import rate from '../rate/index';
+import select from '../select/index';
+import slider from '../slider/index';
+import spin from '../spin/index';
+import steps from '../steps/index';
+import switch from '../switch/index';
+import tabs from '../tabs/index';
+import tag from '../tag/index';
+import timePicker from '../time-picker/index';
+import timeline from '../timeline/index';
+import tooltip from '../tooltip/index';
+import transfer from '../transfer/index';
+import treeSelect from '../tree-select/index';
+import tree from '../tree/index';
+import upload from '../upload/index';
 export {
-  Affix,
-  Alert,
-  Avatar,
-  BackTop,
-  Badge,
-  Breadcrumb,
-  Button,
-  Card,
-  Carousel,
-  Cascader,
-  Checkbox,
-  Collapse,
-  DataTable,
-  DatePicker,
-  Dropdown,
-  Form,
-  Grid,
-  Icon,
-  InputNumber,
-  Input,
-  Layout,
-  Menu,
-  Message,
-  Modal,
-  MorePanel,
-  Notification,
-  Pagination,
-  Popconfirm,
-  Popover,
-  Progress,
-  Radio,
-  Rate,
-  Select,
-  Slider,
-  Spin,
-  Steps,
-  Switch,
-  Tabs,
-  Tag,
-  TimePicker,
-  Timeline,
-  Tooltip,
-  Transfer,
-  TreeSelect,
-  Tree,
-  Upload
+  affix,
+  alert,
+  avatar,
+  backTop,
+  badge,
+  breadcrumb,
+  button,
+  card,
+  carousel,
+  cascader,
+  checkbox,
+  collapse,
+  dataTable,
+  datePicker,
+  dropdown,
+  form,
+  grid,
+  icon,
+  inputNumber,
+  input,
+  layout,
+  menu,
+  message,
+  modal,
+  morePanel,
+  notification,
+  pagination,
+  popconfirm,
+  popover,
+  progress,
+  radio,
+  rate,
+  select,
+  slider,
+  spin,
+  steps,
+  switch,
+  tabs,
+  tag,
+  timePicker,
+  timeline,
+  tooltip,
+  transfer,
+  treeSelect,
+  tree,
+  upload
 };

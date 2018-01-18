@@ -97,12 +97,12 @@ function getPackageTemplate(cptNames) {
  * by 13
  */
 ` + cptNames.map((cptName) => {
-    const Ctor = upperFirst(camelCase(cptName));
+    const Ctor = camelCase(cptName);
     return `
 import ${Ctor} from '../${cptName}/index';`;
   }).join('') + '\nexport {\n' +
   cptNames.map((cptName) => {
-    return '  ' + upperFirst(camelCase(cptName));
+    return '  ' + camelCase(cptName);
   }).join(',\n') + '\n};\n';
 }
 
