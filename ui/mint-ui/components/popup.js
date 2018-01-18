@@ -132,14 +132,79 @@ module.exports = require("mint-ui/lib/popup/index");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
 /**
  * 垫片侵入
  * by 13
  */
 function shim(Ctor) {
   // 扩展
-  return Ctor;
+  var methods = Ctor.mixins[0].methods;
+  var _doOpen = methods.doOpen;
+
+  var Popup = Vue.component('m-popup', {
+    extends: Ctor,
+    methods: {
+      doOpen: function doOpen(props) {
+        var modal = props.modal;
+        var lockScroll = props.lockScroll;
+        if (modal && lockScroll) {
+          var winScrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+          this.winScrollTop = winScrollTop; // window scroll top
+          var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
+          childNodes.some(function (node) {
+            if (node.style && node.tagName === 'DIV') {
+              // 只找第一个div
+              // node.style.transform = 'translateY(-' + winScrollTop  + 'px)';
+              node.style.marginTop = -winScrollTop + 'px';
+              return true;
+            }
+          });
+        }
+        return _doOpen.apply(this, arguments);
+      },
+      doClose: function doClose() {
+        var _this = this;
+
+        this.visible = false;
+        this.$emit('input', false);
+        this._closing = true;
+
+        this.onClose && this.onClose();
+
+        if (this.lockScroll) {
+          clearTimeout(this.closeTid);
+          this.closeTid = setTimeout(function () {
+            if (_this.modal && _this.bodyOverflow !== 'hidden') {
+              document.body.style.overflow = _this.bodyOverflow;
+              document.body.style.paddingRight = _this.bodyPaddingRight;
+            }
+            _this.bodyOverflow = null;
+            _this.bodyPaddingRight = null;
+            if (_this.winScrollTop !== -1) {
+              var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
+              childNodes.some(function (node) {
+                if (node.style && node.tagName === 'DIV') {
+                  // 只找第一个div
+                  // node.style.transform = 'none';
+                  node.style.marginTop = 'auto';
+                  return true;
+                }
+              });
+              window.scrollTo(0, _this.winScrollTop);
+              _this.winScrollTop = -1;
+            }
+          }, 100);
+        }
+
+        this.opened = false;
+
+        if (!this.transition) {
+          this.doAfterClose();
+        }
+      }
+    }
+  });
+  return Popup;
 }
 /* harmony default export */ __webpack_exports__["a"] = (shim);
 
