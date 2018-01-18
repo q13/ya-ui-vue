@@ -4,16 +4,25 @@
  * by 13
  */
 import Vue from 'vue';
-import { Grid } from 'iview';
+import { Row, Col } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Grid); // 加垫片
+const NewRow = shim(Row); // 加垫片
 // 替换组件前缀
-replaceIviewComponentPrefix(NewCtor);
+replaceIviewComponentPrefix(NewRow);
 // 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Vue.component(NewRow.globalName, NewRow);
 
-export default NewCtor;
+const NewCol = shim(Col); // 加垫片
+// 替换组件前缀
+replaceIviewComponentPrefix(NewCol);
+// 自动注册组件
+Vue.component(NewCol.globalName, NewCol);
+
+export {
+  NewRow as Row,
+  NewCol as Col
+};

@@ -4,16 +4,32 @@
  * by 13
  */
 import Vue from 'vue';
-import { Select } from 'iview';
+import { Select, Option, OptionGroup } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Select); // 加垫片
+const NewSelect = shim(Select); // 加垫片
 // 替换组件前缀
-replaceIviewComponentPrefix(NewCtor);
+replaceIviewComponentPrefix(NewSelect);
 // 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Vue.component(NewSelect.globalName, NewSelect);
 
-export default NewCtor;
+const NewOption = shim(Option); // 加垫片
+// 替换组件前缀
+replaceIviewComponentPrefix(NewOption);
+// 自动注册组件
+Vue.component(NewOption.globalName, NewOption);
+
+const NewOptionGroup = shim(OptionGroup); // 加垫片
+// 替换组件前缀
+replaceIviewComponentPrefix(NewOptionGroup);
+// 自动注册组件
+Vue.component(NewOptionGroup.globalName, NewOptionGroup);
+
+export {
+  NewSelect as Select,
+  NewOption as Option,
+  NewOptionGroup as OptionGroup
+};

@@ -129,9 +129,15 @@ function replaceMintUiComponentPrefix(Ctor) {
 function replaceIviewComponentPrefix(Ctor) {
   var libPrefix = getProperComponentPrefix('iview');
   var name = Ctor.name;
+  if (['iCircle', 'iForm', 'iCol', 'iSelect', 'iOption', 'iSwitch'].some(function (v) {
+    return v === name;
+  })) {
+    name = name.slice(1);
+  };
   var newName = name;
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
   Ctor.globalName = newName; // 替换成新的组件名
+  console.log(Ctor);
   return Ctor;
 }
 /**

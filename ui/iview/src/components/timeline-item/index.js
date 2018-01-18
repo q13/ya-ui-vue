@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Timelineitem } from 'iview';
+import { TimelineItem } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Timelineitem); // 加垫片
+const NewCtor = shim(TimelineItem); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件

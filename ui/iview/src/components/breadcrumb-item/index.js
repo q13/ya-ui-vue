@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Breadcrumbitem } from 'iview';
+import { BreadcrumbItem } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Breadcrumbitem); // 加垫片
+const NewCtor = shim(BreadcrumbItem); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件

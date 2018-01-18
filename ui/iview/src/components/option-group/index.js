@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Optiongroup } from 'iview';
+import { OptionGroup } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Optiongroup); // 加垫片
+const NewCtor = shim(OptionGroup); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件

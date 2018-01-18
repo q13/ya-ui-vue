@@ -118,7 +118,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_iview__["Autocomplete"]); // 加垫片
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_iview__["AutoComplete"]); // 加垫片
 // 替换组件前缀
 Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceIviewComponentPrefix"])(NewCtor);
 // 自动注册组件

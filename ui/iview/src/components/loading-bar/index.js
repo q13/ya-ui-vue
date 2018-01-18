@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Loadingbar } from 'iview';
+import { LoadingBar } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Loadingbar); // 加垫片
+const NewCtor = shim(LoadingBar); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件

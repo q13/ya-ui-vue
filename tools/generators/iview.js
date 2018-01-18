@@ -21,7 +21,7 @@ const SRC_PATH = path.resolve(LIB_PATH, 'src');
  */
 function getCptTemplate(name) {
   // 组件构造函数名
-  const Ctor = capitalize(camelCase(name));
+  const Ctor = upperFirst(camelCase(name));
 
   return {
     index: `

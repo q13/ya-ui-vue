@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Menugroup } from 'iview';
+import { MenuGroup } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Menugroup); // 加垫片
+const NewCtor = shim(MenuGroup); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件

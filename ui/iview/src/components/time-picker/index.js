@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { Timepicker } from 'iview';
+import { TimePicker } from 'iview';
 import {
   replaceIviewComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(Timepicker); // 加垫片
+const NewCtor = shim(TimePicker); // 加垫片
 // 替换组件前缀
 replaceIviewComponentPrefix(NewCtor);
 // 自动注册组件
