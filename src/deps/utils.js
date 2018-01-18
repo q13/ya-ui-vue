@@ -1,21 +1,6 @@
 import {
   upperFirst
 } from 'lodash';
-/**
- * 替换组件name前缀
- * @param {string} name
- * @param {string} prefix1
- * @param {string} prefix2
- */
-function replaceComponentPrefix(name, prefix1, prefix2) {
-  if (prefix1 === 'el-') {
-    prefix1 = 'El';
-  }
-  if (prefix2 === 'y-') {
-    prefix2 = 'Y';
-  }
-  return name.replace(prefix1, prefix2);
-};
 
 /**
  * 获取对应组件库的前缀预设
@@ -30,6 +15,7 @@ function getProperComponentPrefix(libName) {
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
+
 /**
  * 替换element-ui组件前缀
  */
@@ -38,7 +24,7 @@ function replaceElementUiComponentPrefix(Ctor) {
   const name = Ctor.name;
   let newName = name.slice(2);
   newName = upperFirst(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -49,7 +35,7 @@ function replaceMintUiComponentPrefix(Ctor) {
   const name = Ctor.name;
   let newName = name.slice(3);
   newName = libPrefix + '-' + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -60,7 +46,7 @@ function replaceIviewComponentPrefix(Ctor) {
   const name = Ctor.name;
   let newName = name;
   newName = upperFirst(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -71,13 +57,12 @@ function replaceVueBeautyComponentPrefix(Ctor) {
   const name = Ctor.name;
   let newName = name;
   newName = upperFirst(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 export {
   replaceElementUiComponentPrefix,
   replaceMintUiComponentPrefix,
   replaceIviewComponentPrefix,
-  replaceVueBeautyComponentPrefix,
-  replaceComponentPrefix
+  replaceVueBeautyComponentPrefix
 };

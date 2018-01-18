@@ -14,6 +14,6 @@ const NewCtor = shim(dataTable); // 加垫片
 // 替换组件前缀
 replaceVueBeautyComponentPrefix(NewCtor);
 // 自动注册组件
-Vue.component(NewCtor.name, NewCtor);
+Vue.component(NewCtor.globalName, NewCtor);
 
 export default NewCtor;

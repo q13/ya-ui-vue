@@ -118,7 +118,7 @@ var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__W
 // 替换组件前缀
 Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewCtor);
 // 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.name, NewCtor);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 

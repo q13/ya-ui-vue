@@ -83,25 +83,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceMintUiComponentPrefix", function() { return replaceMintUiComponentPrefix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceIviewComponentPrefix", function() { return replaceIviewComponentPrefix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceVueBeautyComponentPrefix", function() { return replaceVueBeautyComponentPrefix; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceComponentPrefix", function() { return replaceComponentPrefix; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
-/**
- * 替换组件name前缀
- * @param {string} name
- * @param {string} prefix1
- * @param {string} prefix2
- */
-function replaceComponentPrefix(name, prefix1, prefix2) {
-  if (prefix1 === 'el-') {
-    prefix1 = 'El';
-  }
-  if (prefix2 === 'y-') {
-    prefix2 = 'Y';
-  }
-  return name.replace(prefix1, prefix2);
-};
 
 /**
  * 获取对应组件库的前缀预设
@@ -116,6 +100,7 @@ function getProperComponentPrefix(libName) {
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
+
 /**
  * 替换element-ui组件前缀
  */
@@ -124,7 +109,7 @@ function replaceElementUiComponentPrefix(Ctor) {
   var name = Ctor.name;
   var newName = name.slice(2);
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -135,7 +120,7 @@ function replaceMintUiComponentPrefix(Ctor) {
   var name = Ctor.name;
   var newName = name.slice(3);
   newName = libPrefix + '-' + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -146,7 +131,7 @@ function replaceIviewComponentPrefix(Ctor) {
   var name = Ctor.name;
   var newName = name;
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 /**
@@ -157,7 +142,7 @@ function replaceVueBeautyComponentPrefix(Ctor) {
   var name = Ctor.name;
   var newName = name;
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.name = newName; // 替换成新的组件名
+  Ctor.globalName = newName; // 替换成新的组件名
   return Ctor;
 }
 

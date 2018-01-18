@@ -32,7 +32,7 @@ const NewCtor = shim(Ctor); // 加垫片
 // 替换组件前缀
 replaceMintUiComponentPrefix(NewCtor);
 // 自动注册组件
-Vue.component(NewCtor.name, NewCtor);
+Vue.component(NewCtor.globalName, NewCtor);
 
 export default NewCtor;
 `,
