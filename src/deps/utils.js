@@ -52,7 +52,6 @@ function replaceIviewComponentPrefix(Ctor) {
   let newName = name;
   newName = upperFirst(libPrefix) + newName;
   Ctor.globalName = newName; // 替换成新的组件名
-  console.log(Ctor);
   return Ctor;
 }
 /**

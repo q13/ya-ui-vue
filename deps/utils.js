@@ -137,7 +137,6 @@ function replaceIviewComponentPrefix(Ctor) {
   var newName = name;
   newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
   Ctor.globalName = newName; // 替换成新的组件名
-  console.log(Ctor);
   return Ctor;
 }
 /**
