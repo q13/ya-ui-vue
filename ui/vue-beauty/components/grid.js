@@ -101,6 +101,8 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "col", function() { return NewCol; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "row", function() { return NewRow; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty__ = __webpack_require__(1);
@@ -118,13 +120,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["grid"]); // 加垫片
+var NewCol = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["col"]); // 加垫片
 // 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewCtor);
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewCol);
 // 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCol.globalName, NewCol);
 
-/* harmony default export */ __webpack_exports__["default"] = (NewCtor);
+var NewRow = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["row"]); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewRow);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewRow.globalName, NewRow);
+
+
 
 /***/ }),
 

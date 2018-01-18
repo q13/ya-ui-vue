@@ -19,11 +19,11 @@ import dataTable from '../data-table/index';
 import datePicker from '../date-picker/index';
 import dropdown from '../dropdown/index';
 import form from '../form/index';
-import grid from '../grid/index';
+import { col, row } from '../grid/index';
 import icon from '../icon/index';
 import inputNumber from '../input-number/index';
 import input from '../input/index';
-import layout from '../layout/index';
+import { layout, sider, header, content, footer } from '../layout/index';
 import menu from '../menu/index';
 import message from '../message/index';
 import modal from '../modal/index';
@@ -32,14 +32,14 @@ import notification from '../notification/index';
 import pagination from '../pagination/index';
 import popconfirm from '../popconfirm/index';
 import popover from '../popover/index';
-import progress from '../progress/index';
+import { progressLine, progressCircle } from '../progress/index';
 import radio from '../radio/index';
 import rate from '../rate/index';
 import select from '../select/index';
 import slider from '../slider/index';
 import spin from '../spin/index';
-import steps from '../steps/index';
-import switch from '../switch/index';
+import { steps, step } from '../steps/index';
+import vSwitch from '../switch/index';
 import tabs from '../tabs/index';
 import tag from '../tag/index';
 import timePicker from '../time-picker/index';
@@ -66,11 +66,16 @@ export {
   datePicker,
   dropdown,
   form,
-  grid,
+  row,
+  col,
   icon,
   inputNumber,
   input,
   layout,
+  sider,
+  header,
+  content,
+  footer,
   menu,
   message,
   modal,
@@ -79,14 +84,16 @@ export {
   pagination,
   popconfirm,
   popover,
-  progress,
+  progressLine,
+  progressCircle,
   radio,
   rate,
   select,
   slider,
   spin,
   steps,
-  switch,
+  step,
+  vSwitch,
   tabs,
   tag,
   timePicker,

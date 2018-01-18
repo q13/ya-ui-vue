@@ -4,16 +4,25 @@
  * by 13
  */
 import Vue from 'vue';
-import { progress } from 'vue-beauty';
+import { progressLine, progressCircle } from 'vue-beauty';
 import {
   replaceVueBeautyComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(progress); // 加垫片
+const NewProgressLine = shim(progressLine); // 加垫片
 // 替换组件前缀
-replaceVueBeautyComponentPrefix(NewCtor);
+replaceVueBeautyComponentPrefix(NewProgressLine);
 // 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Vue.component(NewProgressLine.globalName, NewProgressLine);
 
-export default NewCtor;
+const NewProgressCircle = shim(progressCircle); // 加垫片
+// 替换组件前缀
+replaceVueBeautyComponentPrefix(NewProgressCircle);
+// 自动注册组件
+Vue.component(NewProgressCircle.globalName, NewProgressCircle);
+
+export {
+  NewProgressLine as progressLine,
+  NewProgressCircle as progressCircle
+}

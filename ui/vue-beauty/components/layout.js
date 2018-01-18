@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -96,18 +96,23 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }),
 
-/***/ 44:
+/***/ 43:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "layout", function() { return NewLayout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sider", function() { return NewSider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "header", function() { return NewHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "content", function() { return NewContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footer", function() { return NewFooter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(44);
 
 /**
  * Button proxy
@@ -118,17 +123,41 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["layout"]); // 加垫片
+var NewLayout = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["layout"]); // 加垫片
 // 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewCtor);
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewLayout);
 // 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewLayout.globalName, NewLayout);
 
-/* harmony default export */ __webpack_exports__["default"] = (NewCtor);
+var NewSider = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["sider"]); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewSider);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewSider.globalName, NewSider);
+
+var NewHeader = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["header"]); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewHeader);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewHeader.globalName, NewHeader);
+
+var NewContent = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["content"]); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewContent);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewContent.globalName, NewContent);
+
+var NewFooter = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["footer"]); // 加垫片
+// 替换组件前缀
+Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewFooter);
+// 自动注册组件
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewFooter.globalName, NewFooter);
+
+
 
 /***/ }),
 
-/***/ 45:
+/***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

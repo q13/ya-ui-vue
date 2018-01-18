@@ -4,13 +4,13 @@
  * by 13
  */
 import Vue from 'vue';
-import { switch } from 'vue-beauty';
+import { vSwitch } from 'vue-beauty';
 import {
   replaceVueBeautyComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(switch); // 加垫片
+const NewCtor = shim(vSwitch); // 加垫片
 // 替换组件前缀
 replaceVueBeautyComponentPrefix(NewCtor);
 // 自动注册组件

@@ -4,16 +4,25 @@
  * by 13
  */
 import Vue from 'vue';
-import { steps } from 'vue-beauty';
+import { steps, step } from 'vue-beauty';
 import {
   replaceVueBeautyComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(steps); // 加垫片
+const NewSteps = shim(steps); // 加垫片
 // 替换组件前缀
-replaceVueBeautyComponentPrefix(NewCtor);
+replaceVueBeautyComponentPrefix(NewSteps);
 // 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Vue.component(NewSteps.globalName, NewSteps);
 
-export default NewCtor;
+const NewStep = shim(step); // 加垫片
+// 替换组件前缀
+replaceVueBeautyComponentPrefix(NewStep);
+// 自动注册组件
+Vue.component(NewStep.globalName, NewStep);
+
+export {
+  NewSteps as steps,
+  NewStep as step
+};

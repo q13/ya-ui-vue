@@ -143,20 +143,26 @@ function generateCode() {
     const cptPath = path.resolve(SRC_PATH, 'components', name);
     // index
     let filePath = path.resolve(cptPath, 'index.js');
-    fsExtra.outputFileSync(filePath, tpls['index']);
+    if (!fs.existsSync(filePath)) {
+      fsExtra.outputFileSync(filePath, tpls['index']);
+    }
     // styling
     filePath = path.resolve(cptPath, 'styling.js');
-    fsExtra.outputFileSync(filePath, tpls['styling']);
+    if (!fs.existsSync(filePath)) {
+      fsExtra.outputFileSync(filePath, tpls['styling']);
+    }
     // shim
     filePath = path.resolve(cptPath, 'shim.js');
     if (!fs.existsSync(filePath)) { // shim文件存在不覆盖
       fsExtra.outputFileSync(filePath, tpls['shim']);
     }
-
     logger.info('mint-ui: ' + name + ' created.');
   });
   // 创建完整包索引
-  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate(cptNames));
+  const filePath = path.resolve(SRC_PATH, 'components/index/index.js');
+  if (!fs.existsSync(filePath)) {
+    fsExtra.outputFileSync(filePath, getPackageTemplate(cptNames));
+  }
   logger.info('mint-ui: component create done.');
 }
 

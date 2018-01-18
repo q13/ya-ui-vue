@@ -4,16 +4,25 @@
  * by 13
  */
 import Vue from 'vue';
-import { grid } from 'vue-beauty';
+import { col, row } from 'vue-beauty';
 import {
   replaceVueBeautyComponentPrefix
 } from 'deps/utils';
 import shim from './shim';
 
-const NewCtor = shim(grid); // 加垫片
+const NewCol = shim(col); // 加垫片
 // 替换组件前缀
-replaceVueBeautyComponentPrefix(NewCtor);
+replaceVueBeautyComponentPrefix(NewCol);
 // 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Vue.component(NewCol.globalName, NewCol);
 
-export default NewCtor;
+const NewRow = shim(row); // 加垫片
+// 替换组件前缀
+replaceVueBeautyComponentPrefix(NewRow);
+// 自动注册组件
+Vue.component(NewRow.globalName, NewRow);
+
+export {
+  NewCol as col,
+  NewRow as row
+};

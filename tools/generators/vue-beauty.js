@@ -97,12 +97,20 @@ function getPackageTemplate(cptNames) {
  * by 13
  */
 ` + cptNames.map((cptName) => {
-    const Ctor = camelCase(cptName);
+    let Ctor = camelCase(cptName);
+    if (Ctor === 'switch') {
+      Ctor = 'switch_';
+    }
     return `
 import ${Ctor} from '../${cptName}/index';`;
   }).join('') + '\nexport {\n' +
   cptNames.map((cptName) => {
-    return '  ' + camelCase(cptName);
+    if (cptName === 'switch') {
+      cptName = 'switch_ as switch';
+    } else {
+      cptName = camelCase(cptName);
+    }
+    return '  ' + cptName;
   }).join(',\n') + '\n};\n';
 }
 
@@ -140,20 +148,26 @@ function generateCode() {
     const cptPath = path.resolve(SRC_PATH, 'components', name);
     // index
     let filePath = path.resolve(cptPath, 'index.js');
-    fsExtra.outputFileSync(filePath, tpls['index']);
+    if (!fs.existsSync(filePath)) {
+      fsExtra.outputFileSync(filePath, tpls['index']);
+    }
     // styling
     filePath = path.resolve(cptPath, 'styling.js');
-    fsExtra.outputFileSync(filePath, tpls['styling']);
+    if (!fs.existsSync(filePath)) {
+      fsExtra.outputFileSync(filePath, tpls['styling']);
+    }
     // shim
     filePath = path.resolve(cptPath, 'shim.js');
     if (!fs.existsSync(filePath)) { // shim文件存在不覆盖
       fsExtra.outputFileSync(filePath, tpls['shim']);
     }
-
     logger.info('vue-beauty: ' + name + ' created.');
   });
   // 创建完整包索引
-  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate(cptNames));
+  const filePath = path.resolve(SRC_PATH, 'components/index/index.js');
+  if (!fs.existsSync(filePath)) {
+    fsExtra.outputFileSync(filePath, getPackageTemplate(cptNames));
+  }
   logger.info('vue-beauty: component create done.');
 }
 
