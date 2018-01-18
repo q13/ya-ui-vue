@@ -87,6 +87,22 @@ import './index.css';
   };
 }
 
+/**
+ * 获取完整包引用模板
+ */
+function getPackageTemplate() { 
+  return `
+/**
+ * 完整引用
+ * by 13
+ */ 
+import Vue from 'vue';
+import vueBeauty from 'vue-beauty';
+Vue.use(vueBeauty);
+export default vueBeauty;
+`;
+}
+
 function generateCode() {
   // copy default theme
   fsExtra.copySync(path.resolve(REF_PATH, 'package/style/vue-beauty.css'), path.resolve(SRC_PATH, 'themes/default/index.css'));
@@ -133,6 +149,8 @@ function generateCode() {
 
     logger.info('vue-beauty: ' + name + ' created.');
   });
+  // 创建完整包索引
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
   logger.info('vue-beauty: component create done.');
 }
 

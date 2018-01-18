@@ -87,6 +87,22 @@ import './index.less';
   };
 }
 
+/**
+ * 获取完整包引用模板
+ */
+function getPackageTemplate() { 
+  return `
+/**
+ * 完整引用
+ * by 13
+ */ 
+import Vue from 'vue';
+import iView from 'iview';
+Vue.use(iView);
+export default iView;
+`;
+}
+
 function generateCode() {
   // copy default theme
   fsExtra.copySync(path.resolve(REF_PATH, 'src/styles'), path.resolve(SRC_PATH, 'themes/default'));
@@ -133,6 +149,8 @@ function generateCode() {
 
     logger.info('iview: ' + name + ' created.');
   });
+  // 创建完整包索引
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
   logger.info('iview: component create done.');
 }
 

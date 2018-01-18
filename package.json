@@ -1,6 +1,6 @@
 {
   "name": "ya-ui-vue",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A UI toolkit for Yazuo base on vue.js",
   "main": "dist/index.js",
   "module": "index.js",

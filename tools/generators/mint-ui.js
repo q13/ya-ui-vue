@@ -86,6 +86,22 @@ ${importCss}
   };
 }
 
+/**
+ * 获取完整包引用模板
+ */
+function getPackageTemplate() { 
+  return `
+/**
+ * 完整引用
+ * by 13
+ */ 
+import Vue from 'vue';
+import MintUI from 'iview';
+Vue.use(MintUI);
+export default MintUI;
+`;
+}
+
 function generateCode() {
   // copy default theme
   const cptNames = glob.sync('*/', {
@@ -133,6 +149,8 @@ function generateCode() {
 
     logger.info('mint-ui: ' + name + ' created.');
   });
+  // 创建完整包索引
+  fsExtra.outputFileSync(path.resolve(SRC_PATH, 'components/index/index.js'), getPackageTemplate());
   logger.info('mint-ui: component create done.');
 }
 
