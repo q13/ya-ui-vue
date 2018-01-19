@@ -1,26 +1,27 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { col, row } from 'vue-beauty';
 import {
-  replaceVueBeautyComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewCol = shim(col); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewCol);
-// 自动注册组件
-Vue.component(NewCol.globalName, NewCol);
+let NewCol = wrap(col); // 加垫片
+// 加垫片注册
+NewCol = mapComponent({
+  Ctor: NewCol,
+  libName: 'vue-beauty'
+});
 
-const NewRow = shim(row); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewRow);
-// 自动注册组件
-Vue.component(NewRow.globalName, NewRow);
+let NewRow = wrap(row); // 加垫片
+// 加垫片注册
+NewRow = mapComponent({
+  Ctor: NewRow,
+  libName: 'vue-beauty'
+});
 
 export {
   NewCol as col,

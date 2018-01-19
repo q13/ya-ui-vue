@@ -1,26 +1,27 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { steps, step } from 'vue-beauty';
 import {
-  replaceVueBeautyComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewSteps = shim(steps); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewSteps);
-// 自动注册组件
-Vue.component(NewSteps.globalName, NewSteps);
+let NewSteps = wrap(steps); // 加垫片
+// 加垫片注册
+NewSteps = mapComponent({
+  Ctor: NewSteps,
+  libName: 'vue-beauty'
+});
 
-const NewStep = shim(step); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewStep);
-// 自动注册组件
-Vue.component(NewStep.globalName, NewStep);
+let NewStep = wrap(step); // 加垫片
+// 加垫片注册
+NewSteps = mapComponent({
+  Ctor: NewStep,
+  libName: 'vue-beauty'
+});
 
 export {
   NewSteps as steps,

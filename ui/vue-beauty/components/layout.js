@@ -7,7 +7,7 @@
 		exports["ya_vue-beauty_layout"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_vue-beauty_layout"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 43);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,25 +78,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = require("vue-beauty");
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports) {
 
-module.exports = require("vue-beauty");
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ }),
-
-/***/ 43:
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,71 +99,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "header", function() { return NewHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "content", function() { return NewContent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footer", function() { return NewFooter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(43);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
+var NewLayout = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["layout"]); // 加垫片
+// 加垫片注册
+NewLayout = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewLayout,
+  libName: 'vue-beauty'
+});
 
-var NewLayout = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["layout"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewLayout);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewLayout.globalName, NewLayout);
+var NewSider = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["sider"]); // 加垫片
+// 加垫片注册
+NewSider = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewSider,
+  libName: 'vue-beauty'
+});
 
-var NewSider = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["sider"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewSider);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewSider.globalName, NewSider);
+var NewHeader = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["header"]); // 加垫片
+// 加垫片注册
+NewHeader = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewHeader,
+  libName: 'vue-beauty'
+});
 
-var NewHeader = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["header"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewHeader);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewHeader.globalName, NewHeader);
+var NewContent = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["content"]); // 加垫片
+// 加垫片注册
+NewContent = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewContent,
+  libName: 'vue-beauty'
+});
 
-var NewContent = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["content"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewContent);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewContent.globalName, NewContent);
-
-var NewFooter = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["footer"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewFooter);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewFooter.globalName, NewFooter);
+var NewFooter = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["footer"]); // 加垫片
+// 加垫片注册
+NewFooter = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewFooter,
+  libName: 'vue-beauty'
+});
 
 
 
 /***/ }),
 
-/***/ 44:
+/***/ 43:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 

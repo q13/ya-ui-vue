@@ -1,26 +1,27 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { Row, Col } from 'iview';
 import {
-  replaceIviewComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewRow = shim(Row); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewRow);
-// 自动注册组件
-Vue.component(NewRow.globalName, NewRow);
+let NewRow = wrap(Row); // 加垫片
+// 加垫片注册
+NewRow = mapComponent({
+  Ctor: NewRow,
+  libName: 'iview'
+});
 
-const NewCol = shim(Col); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewCol);
-// 自动注册组件
-Vue.component(NewCol.globalName, NewCol);
+let NewCol = wrap(Col); // 加垫片
+// 加垫片注册
+NewCol = mapComponent({
+  Ctor: NewCol,
+  libName: 'iview'
+});
 
 export {
   NewRow as Row,

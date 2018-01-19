@@ -9,8 +9,8 @@ export default function () {
 
   return {
     template: `<div>
-      <i-button>111</i-button>
-      <i-slider v-model="value"></i-slider>
+      <Button>111</Button>
+      <Slider v-model="value"></Slider>
     </div>`,
     data() {
       return {

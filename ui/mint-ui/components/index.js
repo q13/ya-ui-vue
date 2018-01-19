@@ -7,7 +7,7 @@
 		exports["ya_mint-ui_index"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_mint-ui_index"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,1928 +70,1789 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 104);
+/******/ 	return __webpack_require__(__webpack_require__.s = 103);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_actionsheet_index__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_actionsheet_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_actionsheet_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_actionsheet__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_actionsheet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_actionsheet__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(3);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_actionsheet_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_actionsheet___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/actionsheet/index");
+module.exports = require("mint-ui/lib/actionsheet");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_badge_index__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_badge_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_badge_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_badge__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_badge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_badge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(6);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_badge_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_badge___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/badge/index");
+module.exports = require("mint-ui/lib/badge");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_button_index__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_button_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_button_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_button__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(9);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_button_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_button___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/button/index");
+module.exports = require("mint-ui/lib/button");
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(12);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/cell-swipe/index");
+module.exports = require("mint-ui/lib/cell-swipe");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_index__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(15);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/cell/index");
+module.exports = require("mint-ui/lib/cell");
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_checklist_index__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_checklist_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_checklist_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_checklist__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_checklist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_checklist__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(18);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_checklist_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_checklist___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/checklist/index");
+module.exports = require("mint-ui/lib/checklist");
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 20 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_datetime_picker_index__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_datetime_picker_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_datetime_picker_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_datetime_picker__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_datetime_picker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_datetime_picker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(21);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_datetime_picker_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_datetime_picker___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/datetime-picker/index");
+module.exports = require("mint-ui/lib/datetime-picker");
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 23 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_field_index__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_field_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_field_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_field__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_field___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_field__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(24);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_field_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_field___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/field/index");
+module.exports = require("mint-ui/lib/field");
+
+/***/ }),
+/* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 26 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_font_index__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_font_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_font_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_font__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_font___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_font__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(27);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_font_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_font___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/font/index");
+module.exports = require("mint-ui/lib/font");
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 29 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_header_index__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_header_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_header_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_header__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_header__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(30);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_header_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_header___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/header/index");
+module.exports = require("mint-ui/lib/header");
+
+/***/ }),
+/* 30 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_list_index__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_list_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_list_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_list__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_list___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_list__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(33);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_list_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_list___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/index-list/index");
+module.exports = require("mint-ui/lib/index-list");
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 35 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_section_index__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_section_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_section_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_section__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_section___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_section__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(36);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_index_section_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_index_section___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/index-section/index");
+module.exports = require("mint-ui/lib/index-section");
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_indicator_index__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_indicator_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_indicator_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_indicator__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_indicator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_indicator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(39);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_indicator_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_indicator___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/indicator/index");
+module.exports = require("mint-ui/lib/indicator");
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_infinite_scroll_index__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_infinite_scroll_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_infinite_scroll_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_infinite_scroll__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_infinite_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_infinite_scroll__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(42);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_infinite_scroll_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_infinite_scroll___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/infinite-scroll/index");
+module.exports = require("mint-ui/lib/infinite-scroll");
+
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_lazyload__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_lazyload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_lazyload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(45);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_lazyload_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_lazyload___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/lazyload/index");
+module.exports = require("mint-ui/lib/lazyload");
+
+/***/ }),
+/* 45 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_loadmore_index__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_loadmore_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_loadmore_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_loadmore__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_loadmore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_loadmore__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(48);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_loadmore_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_loadmore___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/loadmore/index");
+module.exports = require("mint-ui/lib/loadmore");
+
+/***/ }),
+/* 48 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_message_box_index__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_message_box_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_message_box_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_message_box__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_message_box___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_message_box__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(51);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_message_box_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_message_box___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/message-box/index");
+module.exports = require("mint-ui/lib/message-box");
+
+/***/ }),
+/* 51 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 53 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_navbar_index__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_navbar_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_navbar_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_navbar__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_navbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_navbar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(54);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_navbar_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_navbar___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/navbar/index");
+module.exports = require("mint-ui/lib/navbar");
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 56 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_palette_button_index__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_palette_button_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_palette_button_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_palette_button__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_palette_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_palette_button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(57);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_palette_button_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_palette_button___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/palette-button/index");
+module.exports = require("mint-ui/lib/palette-button");
+
+/***/ }),
+/* 57 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 59 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_picker_index__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_picker_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_picker_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_picker__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_picker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_picker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(60);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_picker_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_picker___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/picker/index");
+module.exports = require("mint-ui/lib/picker");
+
+/***/ }),
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 62 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(63);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/popup/index");
+module.exports = require("mint-ui/lib/popup");
+
+/***/ }),
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  var methods = Ctor.mixins[0].methods;
-  var _doOpen = methods.doOpen;
-
-  var Popup = Vue.component('m-popup', {
-    extends: Ctor,
-    methods: {
-      doOpen: function doOpen(props) {
-        var modal = props.modal;
-        var lockScroll = props.lockScroll;
-        if (modal && lockScroll) {
-          var winScrollTop = document.body.scrollTop + document.documentElement.scrollTop;
-          this.winScrollTop = winScrollTop; // window scroll top
-          var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
-          childNodes.some(function (node) {
-            if (node.style && node.tagName === 'DIV') {
-              // 只找第一个div
-              // node.style.transform = 'translateY(-' + winScrollTop  + 'px)';
-              node.style.marginTop = -winScrollTop + 'px';
-              return true;
-            }
-          });
-        }
-        return _doOpen.apply(this, arguments);
-      },
-      doClose: function doClose() {
-        var _this = this;
-
-        this.visible = false;
-        this.$emit('input', false);
-        this._closing = true;
-
-        this.onClose && this.onClose();
-
-        if (this.lockScroll) {
-          clearTimeout(this.closeTid);
-          this.closeTid = setTimeout(function () {
-            if (_this.modal && _this.bodyOverflow !== 'hidden') {
-              document.body.style.overflow = _this.bodyOverflow;
-              document.body.style.paddingRight = _this.bodyPaddingRight;
-            }
-            _this.bodyOverflow = null;
-            _this.bodyPaddingRight = null;
-            if (_this.winScrollTop !== -1) {
-              var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
-              childNodes.some(function (node) {
-                if (node.style && node.tagName === 'DIV') {
-                  // 只找第一个div
-                  // node.style.transform = 'none';
-                  node.style.marginTop = 'auto';
-                  return true;
-                }
-              });
-              window.scrollTo(0, _this.winScrollTop);
-              _this.winScrollTop = -1;
-            }
-          }, 100);
-        }
-
-        this.opened = false;
-
-        if (!this.transition) {
-          this.doAfterClose();
-        }
-      }
-    }
-  });
-  return Popup;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 65 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_progress_index__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_progress_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_progress_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_progress__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_progress___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_progress__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(66);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_progress_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_progress___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/progress/index");
+module.exports = require("mint-ui/lib/progress");
+
+/***/ }),
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_radio_index__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_radio_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_radio_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_radio__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_radio___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_radio__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(69);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_radio_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_radio___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/radio/index");
+module.exports = require("mint-ui/lib/radio");
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 71 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_range_index__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_range_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_range_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_range__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_range___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_range__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(72);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_range_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_range___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/range/index");
+module.exports = require("mint-ui/lib/range");
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 74 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_search_index__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_search_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_search_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_search__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_search___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_search__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(75);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_search_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_search___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/search/index");
+module.exports = require("mint-ui/lib/search");
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 77 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(78);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/spinner/index");
+module.exports = require("mint-ui/lib/spinner");
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 80 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_item_index__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_item_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_item_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe_item__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe_item___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe_item__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(81);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_item_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe_item___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/swipe-item/index");
+module.exports = require("mint-ui/lib/swipe-item");
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 83 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_index__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(84);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_swipe_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_swipe___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/swipe/index");
+module.exports = require("mint-ui/lib/swipe");
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 86 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_switch_index__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_switch_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_switch_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_switch__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_switch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_switch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(87);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_switch_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_switch___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/switch/index");
+module.exports = require("mint-ui/lib/switch");
+
+/***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 89 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_item_index__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_item_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_item_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container_item__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container_item___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container_item__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(90);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_item_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container_item___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/tab-container-item/index");
+module.exports = require("mint-ui/lib/tab-container-item");
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 92 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_index__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(93);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_container_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_container___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/tab-container/index");
+module.exports = require("mint-ui/lib/tab-container");
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 95 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_item_index__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_item_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_item_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_item__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_item___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_item__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(96);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tab_item_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tab_item___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/tab-item/index");
+module.exports = require("mint-ui/lib/tab-item");
+
+/***/ }),
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 98 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tabbar_index__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tabbar_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tabbar_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tabbar__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tabbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tabbar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(99);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_tabbar_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_tabbar___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/tabbar/index");
+module.exports = require("mint-ui/lib/tabbar");
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 101 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_toast_index__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_toast_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_toast_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_toast__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_toast___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_toast__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(102);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_toast_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_toast___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/toast/index");
+module.exports = require("mint-ui/lib/toast");
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ }),
 /* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-/* 104 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionsheet_index__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__badge_index__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__button_index__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cell_swipe_index__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cell_index__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__checklist_index__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__datetime_picker_index__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__field_index__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__font_index__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__header_index__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__index_list_index__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__index_section_index__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__indicator_index__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__infinite_scroll_index__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__lazyload_index__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__loadmore_index__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__message_box_index__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navbar_index__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__palette_button_index__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__picker_index__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__popup_index__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__progress_index__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__radio_index__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__range_index__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__search_index__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__spinner_index__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__swipe_item_index__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__swipe_index__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__switch_index__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__tab_container_item_index__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__tab_container_index__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__tab_item_index__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__tabbar_index__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__toast_index__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionsheet_index__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__badge_index__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__button_index__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cell_swipe_index__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cell_index__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__checklist_index__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__datetime_picker_index__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__field_index__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__font_index__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__header_index__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__index_list_index__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__index_section_index__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__indicator_index__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__infinite_scroll_index__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__lazyload_index__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__loadmore_index__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__message_box_index__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__navbar_index__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__palette_button_index__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__picker_index__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__popup_index__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__progress_index__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__radio_index__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__range_index__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__search_index__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__spinner_index__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__swipe_item_index__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__swipe_index__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__switch_index__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__tab_container_item_index__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__tab_container_index__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__tab_item_index__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__tabbar_index__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__toast_index__ = __webpack_require__(100);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Actionsheet", function() { return __WEBPACK_IMPORTED_MODULE_0__actionsheet_index__["default"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Badge", function() { return __WEBPACK_IMPORTED_MODULE_1__badge_index__["default"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return __WEBPACK_IMPORTED_MODULE_2__button_index__["default"]; });

@@ -7,7 +7,7 @@
 		exports["ya_mint-ui_spinner"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_mint-ui_spinner"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 77);
+/******/ 	return __webpack_require__(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,70 +78,61 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
 
-/***/ 1:
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-
-/***/ 77:
+/***/ 76:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(78);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_spinner_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_spinner___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
 
-/***/ 78:
+/***/ 77:
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/spinner/index");
+module.exports = require("mint-ui/lib/spinner");
 
 /***/ }),
 
-/***/ 79:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 

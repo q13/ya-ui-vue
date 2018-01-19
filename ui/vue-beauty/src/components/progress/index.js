@@ -1,28 +1,29 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { progressLine, progressCircle } from 'vue-beauty';
 import {
-  replaceVueBeautyComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewProgressLine = shim(progressLine); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewProgressLine);
-// 自动注册组件
-Vue.component(NewProgressLine.globalName, NewProgressLine);
+let NewProgressLine = wrap(progressLine); // 加垫片
+// 加垫片注册
+NewProgressLine = mapComponent({
+  Ctor: NewProgressLine,
+  libName: 'vue-beauty'
+});
 
-const NewProgressCircle = shim(progressCircle); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewProgressCircle);
-// 自动注册组件
-Vue.component(NewProgressCircle.globalName, NewProgressCircle);
+let NewProgressCircle = wrap(progressCircle); // 加垫片
+// 加垫片注册
+NewProgressCircle = mapComponent({
+  Ctor: NewProgressCircle,
+  libName: 'vue-beauty'
+});
 
 export {
   NewProgressLine as progressLine,
   NewProgressCircle as progressCircle
-}
+};

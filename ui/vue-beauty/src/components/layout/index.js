@@ -1,44 +1,48 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { layout, sider, header, content, footer } from 'vue-beauty';
 import {
-  replaceVueBeautyComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewLayout = shim(layout); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewLayout);
-// 自动注册组件
-Vue.component(NewLayout.globalName, NewLayout);
+let NewLayout = wrap(layout); // 加垫片
+// 加垫片注册
+NewLayout = mapComponent({
+  Ctor: NewLayout,
+  libName: 'vue-beauty'
+});
 
-const NewSider = shim(sider); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewSider);
-// 自动注册组件
-Vue.component(NewSider.globalName, NewSider);
+let NewSider = wrap(sider); // 加垫片
+// 加垫片注册
+NewSider = mapComponent({
+  Ctor: NewSider,
+  libName: 'vue-beauty'
+});
 
-const NewHeader = shim(header); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewHeader);
-// 自动注册组件
-Vue.component(NewHeader.globalName, NewHeader);
+let NewHeader = wrap(header); // 加垫片
+// 加垫片注册
+NewHeader = mapComponent({
+  Ctor: NewHeader,
+  libName: 'vue-beauty'
+});
 
-const NewContent = shim(content); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewContent);
-// 自动注册组件
-Vue.component(NewContent.globalName, NewContent);
+let NewContent = wrap(content); // 加垫片
+// 加垫片注册
+NewContent = mapComponent({
+  Ctor: NewContent,
+  libName: 'vue-beauty'
+});
 
-const NewFooter = shim(footer); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewFooter);
-// 自动注册组件
-Vue.component(NewFooter.globalName, NewFooter);
+let NewFooter = wrap(footer); // 加垫片
+// 加垫片注册
+NewFooter = mapComponent({
+  Ctor: NewFooter,
+  libName: 'vue-beauty'
+});
 
 export {
   NewLayout as layout,

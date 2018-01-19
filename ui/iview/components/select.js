@@ -7,7 +7,7 @@
 		exports["ya_iview_select"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_iview_select"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 99);
+/******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,42 +78,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = require("iview");
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports) {
 
-module.exports = require("iview");
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ }),
 
-/***/ 100:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
-  // 扩展
-  return Ctor;
-}
-/* harmony default export */ __webpack_exports__["a"] = (shim);
-
-/***/ }),
-
-/***/ 2:
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ }),
-
-/***/ 99:
+/***/ 96:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121,42 +97,58 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Select", function() { return NewSelect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Option", function() { return NewOption; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OptionGroup", function() { return NewOptionGroup; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_iview__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_iview___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_iview__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_iview__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_iview___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_iview__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(97);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
+var NewSelect = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_iview__["Select"]); // 加垫片
+// 加垫片注册
+NewSelect = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewSelect,
+  libName: 'iview'
+});
 
-var NewSelect = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_iview__["Select"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceIviewComponentPrefix"])(NewSelect);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewSelect.globalName, NewSelect);
+var NewOption = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_iview__["Option"]); // 加垫片
+// 加垫片注册
+NewOption = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewOption,
+  libName: 'iview'
+});
 
-var NewOption = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_iview__["Option"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceIviewComponentPrefix"])(NewOption);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewOption.globalName, NewOption);
-
-var NewOptionGroup = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_iview__["OptionGroup"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceIviewComponentPrefix"])(NewOptionGroup);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewOptionGroup.globalName, NewOptionGroup);
+var NewOptionGroup = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_iview__["OptionGroup"]); // 加垫片
+// 加垫片注册
+NewOptionGroup = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewOptionGroup,
+  libName: 'iview'
+});
 
 
+/***/ }),
+
+/***/ 97:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 

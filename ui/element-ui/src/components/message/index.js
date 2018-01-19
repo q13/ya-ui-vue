@@ -1,19 +1,19 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import Ctor from 'element-ui/lib/message';
 import {
-  replaceElementUiComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewCtor = shim(Ctor); // 加垫片
-// 替换组件前缀
-replaceElementUiComponentPrefix(NewCtor);
-// 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+let NewCtor = wrap(Ctor); // 封装
+// 加垫片注册
+NewCtor = mapComponent({
+  Ctor: NewCtor,
+  libName: 'element-ui'
+});
 
 export default NewCtor;

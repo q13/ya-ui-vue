@@ -37,7 +37,7 @@ import Icon from '../icon/index';
 import InputNumber from '../input-number/index';
 import Input from '../input/index';
 import Layout from '../layout/index';
-import LoadingBar from '../loading-bar/index';
+// import LoadingBar from '../loading-bar/index'; // this.$loading方式
 import MenuGroup from '../menu-group/index';
 import MenuItem from '../menu-item/index';
 import Menu from '../menu/index';

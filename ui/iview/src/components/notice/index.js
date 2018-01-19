@@ -1,19 +1,20 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { Notice } from 'iview';
 import {
-  replaceIviewComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewCtor = shim(Notice); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewCtor);
-// 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+Notice.name = 'Notice';
+let NewCtor = wrap(Notice); // 加垫片
+// 加垫片注册
+NewCtor = mapComponent({
+  Ctor: NewCtor,
+  libName: 'iview'
+});
 
 export default NewCtor;

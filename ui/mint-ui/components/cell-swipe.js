@@ -7,7 +7,7 @@
 		exports["ya_mint-ui_cell-swipe"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_mint-ui_cell-swipe"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,22 +70,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
+/* 1 */,
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -94,58 +89,55 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */,
-/* 11 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(12);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_cell_swipe_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_cell_swipe___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/cell-swipe/index");
+module.exports = require("mint-ui/lib/cell-swipe");
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 /******/ ]);

@@ -79,12 +79,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceElementUiComponentPrefix", function() { return replaceElementUiComponentPrefix; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceMintUiComponentPrefix", function() { return replaceMintUiComponentPrefix; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceIviewComponentPrefix", function() { return replaceIviewComponentPrefix; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceVueBeautyComponentPrefix", function() { return replaceVueBeautyComponentPrefix; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapComponent", function() { return mapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
+/**
+ * 工具库函数集
+ */
+
 
 
 /**
@@ -100,63 +103,85 @@ function getProperComponentPrefix(libName) {
   }, window.__lib_prefix__ || {});
   return libPrefix[libName];
 }
+/**
+ * 获取默认的组件库名称
+ */
+function getDefaultComponentLibName() {
+  var defaultLibName = window.__lib_name__ || '';
+  return defaultLibName;
+}
 
 /**
- * 替换element-ui组件前缀
+ * 获取默认保留关键字列表
+ * @param {string} name 库名称
  */
-function replaceElementUiComponentPrefix(Ctor) {
-  var libPrefix = getProperComponentPrefix('element-ui');
-  var name = Ctor.name;
-  var newName = name.slice(2);
-  newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.globalName = newName; // 替换成新的组件名
-  return Ctor;
-}
-/**
- * 替换mint-ui组件前缀
- */
-function replaceMintUiComponentPrefix(Ctor) {
-  var libPrefix = getProperComponentPrefix('mint-ui');
-  var name = Ctor.name;
-  var newName = name.slice(3);
-  newName = libPrefix + '-' + newName;
-  Ctor.globalName = newName; // 替换成新的组件名
-  return Ctor;
-}
-/**
- * 替换iview组件前缀
- */
-function replaceIviewComponentPrefix(Ctor) {
-  var libPrefix = getProperComponentPrefix('iview');
-  var name = Ctor.name;
-  if (['iCircle', 'iForm', 'iCol', 'iSelect', 'iOption', 'iSwitch'].some(function (v) {
-    return v === name;
-  })) {
-    name = name.slice(1);
-  };
-  var newName = name;
-  newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.globalName = newName; // 替换成新的组件名
-  return Ctor;
-}
-/**
- * 替换vue-beauty组件前缀
- */
-function replaceVueBeautyComponentPrefix(Ctor) {
-  var libPrefix = getProperComponentPrefix('vue-beauty');
-  var name = Ctor.name;
-  if (name === 'Switch') {
-    Ctor.name = 'Switch_';
+function getKeywordsReservedByLibName(name) {
+  var keywords = [];
+  if (name === 'iview') {
+    keywords = ['Circle', 'Form', 'Col', 'Select', 'Option', 'Switch'];
+  } else if (name === 'vue-beauty') {
+    keywords = ['Switch'];
   }
-  var newName = name;
-  newName = Object(__WEBPACK_IMPORTED_MODULE_0_lodash__["upperFirst"])(libPrefix) + newName;
-  Ctor.globalName = newName; // 替换成新的组件名
-  return Ctor;
+  return keywords;
+}
+
+/**
+ * Map component
+ */
+function mapComponent(options) {
+  var Ctor = options.Ctor,
+      libName = options.libName;
+
+  var libPrefix = getProperComponentPrefix(libName);
+  var defaultLibName = getDefaultComponentLibName(); // 默认库名
+  var keywordsReserved = getKeywordsReservedByLibName(libName); // 保留关键字
+  var name = Ctor.name;
+  var componentName = '';
+  if (libName === 'element-ui') {
+    componentName = name.slice(2);
+    componentName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + componentName;
+  } else if (libName === 'mint-ui') {
+    componentName = name.slice(3);
+    componentName = libPrefix + '-' + componentName;
+  } else if (libName === 'iview') {
+    if (keywordsReserved.map(function (keyword) {
+      return 'i' + keyword;
+    }).some(function (v) {
+      return v === name;
+    })) {
+      name = name.slice(1);
+    };
+    componentName = name;
+    componentName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + componentName;
+  } else if (libName === 'vue-beauty') {
+    if (name === 'Switch') {
+      Ctor.name = 'Switch_';
+    }
+    componentName = name;
+    componentName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + componentName;
+  }
+  if (defaultLibName === libName) {
+    // 注册默认库，省略前缀
+    if (!keywordsReserved.some(function (keyword) {
+      // 排除和保留关键字冲突的组件名注册
+      return keyword === name;
+    })) {
+      __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(name, Ctor);
+    }
+  }
+  // 注册global component
+  return __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(componentName, Ctor);
 }
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue");
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("lodash");

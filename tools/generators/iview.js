@@ -26,43 +26,43 @@ function getCptTemplate(name) {
   return {
     index: `
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { ${Ctor} } from 'iview';
 import {
-  replaceIviewComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewCtor = shim(${Ctor}); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewCtor);
-// 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+let NewCtor = wrap(${Ctor}); // 加垫片
+// 加垫片注册
+NewCtor = mapComponent({
+  Ctor: NewCtor,
+  libName: 'iview'
+});
 
 export default NewCtor;
 `,
     styling: `
 /**
- * Button proxy with default style
+ * Component proxy with default style
  * by 13
  */
 import '../../themes/default/${name}.less';
 
 export * from './index';
 `,
-    shim: `
+    wrap: `
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-export default shim;
+export default wrap;
 `
   };
 };
@@ -148,10 +148,10 @@ function generateCode() {
     if (!fs.existsSync(filePath)) {
       fsExtra.outputFileSync(filePath, tpls['styling']);
     }
-    // shim
-    filePath = path.resolve(cptPath, 'shim.js');
-    if (!fs.existsSync(filePath)) { // shim文件存在不覆盖
-      fsExtra.outputFileSync(filePath, tpls['shim']);
+    // wrap
+    filePath = path.resolve(cptPath, 'wrap.js');
+    if (!fs.existsSync(filePath)) { // wrap文件存在不覆盖
+      fsExtra.outputFileSync(filePath, tpls['wrap']);
     }
 
     logger.info('iview: ' + name + ' created.');

@@ -26,43 +26,43 @@ function getCptTemplate(name) {
   return {
     index: `
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { ${Ctor} } from 'vue-beauty';
 import {
-  replaceVueBeautyComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewCtor = shim(${Ctor}); // 加垫片
-// 替换组件前缀
-replaceVueBeautyComponentPrefix(NewCtor);
-// 自动注册组件
-Vue.component(NewCtor.globalName, NewCtor);
+let NewCtor = wrap(${Ctor}); // 加垫片
+// 加垫片注册
+NewCtor = mapComponent({
+  Ctor: NewCtor,
+  libName: 'vue-beauty'
+});
 
 export default NewCtor;
 `,
     styling: `
 /**
- * Button proxy with default style
+ * Component proxy with default style
  * by 13
  */
 import '../../themes/default/${name}.css';
 
 export * from './index';
 `,
-    shim: `
+    wrap: `
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-export default shim;
+export default wrap;
 `
   };
 };
@@ -99,14 +99,14 @@ function getPackageTemplate(cptNames) {
 ` + cptNames.map((cptName) => {
     let Ctor = camelCase(cptName);
     if (Ctor === 'switch') {
-      Ctor = 'switch_';
+      Ctor = 'vSwitch';
     }
     return `
 import ${Ctor} from '../${cptName}/index';`;
   }).join('') + '\nexport {\n' +
   cptNames.map((cptName) => {
     if (cptName === 'switch') {
-      cptName = 'switch_ as switch';
+      cptName = 'vSwitch';
     } else {
       cptName = camelCase(cptName);
     }
@@ -156,10 +156,10 @@ function generateCode() {
     if (!fs.existsSync(filePath)) {
       fsExtra.outputFileSync(filePath, tpls['styling']);
     }
-    // shim
-    filePath = path.resolve(cptPath, 'shim.js');
-    if (!fs.existsSync(filePath)) { // shim文件存在不覆盖
-      fsExtra.outputFileSync(filePath, tpls['shim']);
+    // wrap
+    filePath = path.resolve(cptPath, 'wrap.js');
+    if (!fs.existsSync(filePath)) { // wrap文件存在不覆盖
+      fsExtra.outputFileSync(filePath, tpls['wrap']);
     }
     logger.info('vue-beauty: ' + name + ' created.');
   });

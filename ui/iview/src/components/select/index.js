@@ -1,33 +1,34 @@
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
-import Vue from 'vue';
 import { Select, Option, OptionGroup } from 'iview';
 import {
-  replaceIviewComponentPrefix
+  mapComponent
 } from 'deps/utils';
-import shim from './shim';
+import wrap from './wrap';
 
-const NewSelect = shim(Select); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewSelect);
-// 自动注册组件
-Vue.component(NewSelect.globalName, NewSelect);
+let NewSelect = wrap(Select); // 加垫片
+// 加垫片注册
+NewSelect = mapComponent({
+  Ctor: NewSelect,
+  libName: 'iview'
+});
 
-const NewOption = shim(Option); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewOption);
-// 自动注册组件
-Vue.component(NewOption.globalName, NewOption);
+let NewOption = wrap(Option); // 加垫片
+// 加垫片注册
+NewOption = mapComponent({
+  Ctor: NewOption,
+  libName: 'iview'
+});
 
-const NewOptionGroup = shim(OptionGroup); // 加垫片
-// 替换组件前缀
-replaceIviewComponentPrefix(NewOptionGroup);
-// 自动注册组件
-Vue.component(NewOptionGroup.globalName, NewOptionGroup);
-
+let NewOptionGroup = wrap(OptionGroup); // 加垫片
+// 加垫片注册
+NewOptionGroup = mapComponent({
+  Ctor: NewOptionGroup,
+  libName: 'iview'
+});
 export {
   NewSelect as Select,
   NewOption as Option,

@@ -7,7 +7,7 @@
 		exports["ya_vue-beauty_progress"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_vue-beauty_progress"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 61);
+/******/ 	return __webpack_require__(__webpack_require__.s = 60);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,21 +78,53 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = require("vue-beauty");
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports) {
 
-module.exports = require("vue-beauty");
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports) {
+/***/ 60:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "progressLine", function() { return NewProgressLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "progressCircle", function() { return NewProgressCircle; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(61);
+
+/**
+ * Component proxy
+ * by 13
+ */
+
+
+
+
+var NewProgressLine = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["progressLine"]); // 加垫片
+// 加垫片注册
+NewProgressLine = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewProgressLine,
+  libName: 'vue-beauty'
+});
+
+var NewProgressCircle = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["progressCircle"]); // 加垫片
+// 加垫片注册
+NewProgressCircle = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewProgressCircle,
+  libName: 'vue-beauty'
+});
+
+
 
 /***/ }),
 
@@ -100,56 +132,16 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "progressLine", function() { return NewProgressLine; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "progressCircle", function() { return NewProgressCircle; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(62);
 
 /**
- * Button proxy
+ * 组件封装
  * by 13
  */
-
-
-
-
-
-var NewProgressLine = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["progressLine"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewProgressLine);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewProgressLine.globalName, NewProgressLine);
-
-var NewProgressCircle = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_vue_beauty__["progressCircle"]); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceVueBeautyComponentPrefix"])(NewProgressCircle);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewProgressCircle.globalName, NewProgressCircle);
-
-
-
-/***/ }),
-
-/***/ 62:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-/**
- * 垫片侵入
- * by 13
- */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
   return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 

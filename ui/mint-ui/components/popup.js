@@ -7,7 +7,7 @@
 		exports["ya_mint-ui_popup"] = factory(require("ya-ui-vue/deps/utils"));
 	else
 		root["ya_mint-ui_popup"] = factory(root["ya-ui-vue/deps/utils"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 62);
+/******/ 	return __webpack_require__(__webpack_require__.s = 61);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,135 +78,61 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 0:
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ }),
 
-/***/ 1:
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-
-/***/ 62:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_deps_utils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shim__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(63);
 
 /**
- * Button proxy
+ * Component proxy
  * by 13
  */
 
 
 
 
-
-var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_3__shim__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_1_mint_ui_lib_popup_index___default.a); // 加垫片
-// 替换组件前缀
-Object(__WEBPACK_IMPORTED_MODULE_2_deps_utils__["replaceMintUiComponentPrefix"])(NewCtor);
-// 自动注册组件
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(NewCtor.globalName, NewCtor);
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_mint_ui_lib_popup___default.a); // 封装
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'mint-ui'
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (NewCtor);
 
 /***/ }),
 
-/***/ 63:
+/***/ 62:
 /***/ (function(module, exports) {
 
-module.exports = require("mint-ui/lib/popup/index");
+module.exports = require("mint-ui/lib/popup");
 
 /***/ }),
 
-/***/ 64:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
 /**
- * 垫片侵入
+ * 组件封装
  * by 13
  */
-function shim(Ctor) {
+function wrap(Ctor) {
   // 扩展
-  var methods = Ctor.mixins[0].methods;
-  var _doOpen = methods.doOpen;
-
-  var Popup = Vue.component('m-popup', {
-    extends: Ctor,
-    methods: {
-      doOpen: function doOpen(props) {
-        var modal = props.modal;
-        var lockScroll = props.lockScroll;
-        if (modal && lockScroll) {
-          var winScrollTop = document.body.scrollTop + document.documentElement.scrollTop;
-          this.winScrollTop = winScrollTop; // window scroll top
-          var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
-          childNodes.some(function (node) {
-            if (node.style && node.tagName === 'DIV') {
-              // 只找第一个div
-              // node.style.transform = 'translateY(-' + winScrollTop  + 'px)';
-              node.style.marginTop = -winScrollTop + 'px';
-              return true;
-            }
-          });
-        }
-        return _doOpen.apply(this, arguments);
-      },
-      doClose: function doClose() {
-        var _this = this;
-
-        this.visible = false;
-        this.$emit('input', false);
-        this._closing = true;
-
-        this.onClose && this.onClose();
-
-        if (this.lockScroll) {
-          clearTimeout(this.closeTid);
-          this.closeTid = setTimeout(function () {
-            if (_this.modal && _this.bodyOverflow !== 'hidden') {
-              document.body.style.overflow = _this.bodyOverflow;
-              document.body.style.paddingRight = _this.bodyPaddingRight;
-            }
-            _this.bodyOverflow = null;
-            _this.bodyPaddingRight = null;
-            if (_this.winScrollTop !== -1) {
-              var childNodes = Array.prototype.slice.call(document.body.childNodes, 0);
-              childNodes.some(function (node) {
-                if (node.style && node.tagName === 'DIV') {
-                  // 只找第一个div
-                  // node.style.transform = 'none';
-                  node.style.marginTop = 'auto';
-                  return true;
-                }
-              });
-              window.scrollTo(0, _this.winScrollTop);
-              _this.winScrollTop = -1;
-            }
-          }, 100);
-        }
-
-        this.opened = false;
-
-        if (!this.transition) {
-          this.doAfterClose();
-        }
-      }
-    }
-  });
-  return Popup;
+  return Ctor;
 }
-/* harmony default export */ __webpack_exports__["a"] = (shim);
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 
