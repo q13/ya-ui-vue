@@ -3,13 +3,13 @@
  * Component proxy
  * by 13
  */
-import { switch } from 'vue-beauty';
+import { vSwitch } from 'vue-beauty';
 import {
   mapComponent
 } from 'deps/utils';
 import wrap from './wrap';
 
-let NewCtor = wrap(switch); // 加垫片
+let NewCtor = wrap(vSwitch); // 加垫片
 // 加垫片注册
 NewCtor = mapComponent({
   Ctor: NewCtor,

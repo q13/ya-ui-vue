@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("ya-ui-vue/deps/utils"));
 	else if(typeof define === 'function' && define.amd)
-		define([], factory);
+		define(["ya-ui-vue/deps/utils"], factory);
 	else if(typeof exports === 'object')
-		exports["ya_vue-beauty_switch"] = factory();
+		exports["ya_vue-beauty_switch"] = factory(require("ya-ui-vue/deps/utils"));
 	else
-		root["ya_vue-beauty_switch"] = factory();
-})(typeof self !== 'undefined' ? self : this, function() {
+		root["ya_vue-beauty_switch"] = factory(root["ya-ui-vue/deps/utils"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,15 +70,69 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 74);
+/******/ 	return __webpack_require__(__webpack_require__.s = 70);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 74:
+/***/ 0:
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/13/Project/ya-ui-vue/ui/vue-beauty/src/components/switch/index.js: switch is a reserved word (6:9)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[90m * by 13\u001b[39m\n \u001b[90m 5 | \u001b[39m\u001b[90m */\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[36mswitch\u001b[39m } from \u001b[32m'vue-beauty'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m   | \u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 | \u001b[39m\u001b[36mimport\u001b[39m {\n \u001b[90m 8 | \u001b[39m  mapComponent\n \u001b[90m 9 | \u001b[39m} from \u001b[32m'deps/utils'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n");
+module.exports = require("vue-beauty");
+
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+
+/***/ }),
+
+/***/ 70:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_beauty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deps_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deps_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wrap__ = __webpack_require__(71);
+
+/**
+ * Component proxy
+ * by 13
+ */
+
+
+
+
+var NewCtor = Object(__WEBPACK_IMPORTED_MODULE_2__wrap__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_vue_beauty__["vSwitch"]); // 加垫片
+// 加垫片注册
+NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
+  Ctor: NewCtor,
+  libName: 'vue-beauty'
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (NewCtor);
+
+/***/ }),
+
+/***/ 71:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+/**
+ * 组件封装
+ * by 13
+ */
+function wrap(Ctor) {
+  // 扩展
+  return Ctor;
+}
+/* harmony default export */ __webpack_exports__["a"] = (wrap);
 
 /***/ })
 

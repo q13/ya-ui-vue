@@ -25,10 +25,10 @@ import inputNumber from '../input-number/index';
 import input from '../input/index';
 import { layout, sider, header, content, footer } from '../layout/index';
 import menu from '../menu/index';
-import message from '../message/index';
+// import message from '../message/index';
 import modal from '../modal/index';
 import morePanel from '../more-panel/index';
-import notification from '../notification/index';
+// import notification from '../notification/index';
 import pagination from '../pagination/index';
 import popconfirm from '../popconfirm/index';
 import popover from '../popover/index';
@@ -77,10 +77,10 @@ export {
   content,
   footer,
   menu,
-  message,
+  // message,
   modal,
   morePanel,
-  notification,
+  // notification,
   pagination,
   popconfirm,
   popover,
