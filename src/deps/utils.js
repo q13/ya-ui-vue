@@ -52,8 +52,12 @@ function mapComponent(options) {
   let name = Ctor.name;
   let componentName = '';
   if (libName === 'element-ui') {
-    componentName = name.slice(2);
-    componentName = upperFirst(libPrefix) + componentName;
+    if (name) {
+      if (name !== 'MessageBox') {
+        componentName = name.slice(2);
+      }
+      componentName = upperFirst(libPrefix) + componentName;
+    }
   } else if (libName === 'mint-ui') {
     componentName = name.slice(3);
     componentName = libPrefix + '-' + componentName;
@@ -82,7 +86,13 @@ function mapComponent(options) {
     }
   }
   // 注册global component
-  return Vue.component(componentName, Ctor);
+  let Cpt = null;
+  if (componentName) {
+    Cpt = Vue.component(componentName, Ctor);
+  } else {
+    Cpt = Ctor;
+  }
+  return Cpt;
 }
 export {
   mapComponent

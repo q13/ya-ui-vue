@@ -138,8 +138,12 @@ function mapComponent(options) {
   var name = Ctor.name;
   var componentName = '';
   if (libName === 'element-ui') {
-    componentName = name.slice(2);
-    componentName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + componentName;
+    if (name) {
+      if (name !== 'MessageBox') {
+        componentName = name.slice(2);
+      }
+      componentName = Object(__WEBPACK_IMPORTED_MODULE_1_lodash__["upperFirst"])(libPrefix) + componentName;
+    }
   } else if (libName === 'mint-ui') {
     componentName = name.slice(3);
     componentName = libPrefix + '-' + componentName;
@@ -170,7 +174,13 @@ function mapComponent(options) {
     }
   }
   // 注册global component
-  return __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(componentName, Ctor);
+  var Cpt = null;
+  if (componentName) {
+    Cpt = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component(componentName, Ctor);
+  } else {
+    Cpt = Ctor;
+  }
+  return Cpt;
 }
 
 
