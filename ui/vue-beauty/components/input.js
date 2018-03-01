@@ -129,6 +129,15 @@ NewCtor = Object(__WEBPACK_IMPORTED_MODULE_1_deps_utils__["mapComponent"])({
  * by 13
  */
 function wrap(Ctor) {
+  Ctor.methods.handleInput = function (event) {
+    var _this = this;
+
+    if (this.debounceTimer) clearTimeout(this.debounceTimer);
+    var tempValue = event.target.value;
+    this.debounceTimer = setTimeout(function () {
+      _this.setCurrentValue(tempValue);
+    }, this.debounce);
+  };
   // 扩展
   return Ctor;
 }
