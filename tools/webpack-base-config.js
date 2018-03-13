@@ -32,6 +32,9 @@ function getBaseConfig(configName) {
           }
         }
       }, {
+        test: /\.html$/,
+        loader: 'html-loader'
+      }, {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader'

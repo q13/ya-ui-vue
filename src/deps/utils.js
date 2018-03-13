@@ -8,7 +8,7 @@ import {
 
 /**
  * 获取对应组件库的前缀预设
- * @param {string} libName
+ * @param {String} libName
  */
 function getProperComponentPrefix(libName) {
   const libPrefix = Object.assign({ // 库前缀自定义
@@ -29,7 +29,7 @@ function getDefaultComponentLibName() {
 
 /**
  * 获取默认保留关键字列表
- * @param {string} name 库名称
+ * @param {String} name 库名称
  */
 function getKeywordsReservedByLibName(name) {
   let keywords = [];
@@ -43,6 +43,7 @@ function getKeywordsReservedByLibName(name) {
 
 /**
  * Map component
+ * @param {Object} options - 配置项
  */
 function mapComponent(options) {
   const { Ctor, libName } = options;
