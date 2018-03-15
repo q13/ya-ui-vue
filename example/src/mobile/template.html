@@ -1,3 +1,5 @@
 <div class="demo-mobile">
-  <h3>Demo for mobile</h3>
+  <h3 v-gesture @longtap="handleTap" @tap="handleTap" @doubletap="handleTap" @swipe="handleSwipe">Demo for mobile</h3>
+
+  <h3 ref="test" @touchstart="handleTouchstart" style="border: 1px solid red; width: 300px; height: 200px;">Test</h3>
 </div>

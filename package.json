@@ -7,6 +7,7 @@
   "scripts": {
     "code": "node tools/bin/code.js",
     "lib": "node tools/bin/lib.js",
+    "server": "node ./tools/server.js",
     "dist": "webpack --config tools/webpack.dist.config.js",
     "graph": "webpack --config tools/webpack.graph.config.js",
     "example": "webpack-dev-server --config tools/webpack.example.config.js"
@@ -73,7 +74,9 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "connect": "3.6.3",
+    "serve-static": "1.12.4"
   },
   "keywords": [
     "UI",

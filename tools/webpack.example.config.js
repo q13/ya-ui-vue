@@ -63,6 +63,7 @@ module.exports = mergeWith({}, getBaseConfig(), {
   },
   devServer: {
     contentBase: BASE_DIST_PATH,
+    host: '0.0.0.0',
     hot: true
   },
   plugins: [
