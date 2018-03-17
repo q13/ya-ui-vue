@@ -9,6 +9,8 @@ import 'babel-polyfill';
 import Vue from 'vue';
 // import elementUi from './element-ui/index';
 import mobile from './mobile/index';
+// import ant from './ant/index';
+import antMobile from './ant-mobile/index';
 // import mintUi from './mint-ui/index';
 // import iviewUi from './iview/index';
 // import vueBeautyUi from './vue-beauty/index';
@@ -21,7 +23,9 @@ const widgets = [
   // iviewUi(),
   // vueBeautyUi()
   // test()
-  mobile()
+  mobile(),
+  // ant()
+  antMobile()
 ];
 const App = Vue.extend({
   render(h) {

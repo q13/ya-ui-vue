@@ -1,0 +1,8 @@
+<div class="ant-mobile-demo">
+  {{text}}
+  <my-button @click="handleClick" btn="1" t="btn" outer-tag="span" inner-tag="span" :outer-class="{'outer': true, 'test': true}" inner-class="inner"><span>{{text}}</span></my-button>
+  <MyDatePicker :value="now" title="datepicker" :onChange="handleChange" :visible="visible" @ok="handleOk">
+    <list-item arrow="horizontal">Datetime</list-item>
+  </MyDatePicker>
+  <my-switch :checked="true" :onChange="handleChange">123</my-switch>
+</div>

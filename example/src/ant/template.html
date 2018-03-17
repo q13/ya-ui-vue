@@ -1,0 +1,17 @@
+<div class="ant-demo">
+  {{text}}
+  <my-button @click="handleClick" btn="1" t="btn" outer-tag="span" inner-tag="span" :outer-class="{'outer': true, 'test': true}" inner-class="inner">{{text}}</my-button>
+  <date-picker :onChange="handleChange" date="2">123</date-picker>
+  <modal v-if="!removed" t="modal" title="Basic Modal" :visible="visible" :onCancel="handleCancel" m="3">
+    {{text}}
+    <my-input placeholder="Basic usage" />
+    <my-button t="btn">{{text}}</my-button>
+    <vue-cpt></vue-cpt>
+  </modal>
+  <my-row :gutter="16">
+    <my-col class="gutter-row" :span="6">
+      <div class="gutter-box">col-6</div>
+      <vue-cpt></vue-cpt>
+    </my-col>
+  </my-row>
+</div>

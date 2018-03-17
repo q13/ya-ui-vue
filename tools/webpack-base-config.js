@@ -27,7 +27,8 @@ function getBaseConfig(configName) {
                 useBuiltIns: true, // 引入babel-polyfill会根据env设定去自动shim不支持的特性
                 loose: false // normal方式，参考 https://www.w3ctech.com/topic/1708
               }],
-              'stage-0'
+              'stage-0',
+              'react'
             ]
           }
         }
@@ -52,6 +53,10 @@ function getBaseConfig(configName) {
       alias: {
         'deps': path.resolve(__dirname, '../src/deps'), // 依赖目录
         'ya-ui-vue': path.resolve(__dirname, '..') // 根目录
+        // 'react': 'preact-compat',
+        // 'react-dom': 'preact-compat',
+        // // Not necessary unless you consume a module using `createClass`
+        // 'create-react-class': 'preact-compat/lib/create-react-class'
       }
     },
     plugins: (configName === 'dist' ? [new Prepare()] : []).concat([
