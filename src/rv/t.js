@@ -114,7 +114,9 @@ export default function (R) {
               innerClass
             }, null);
           }
-          return ReactDOM.render(React.createElement(R, reactProps, c), this.$refs.r);
+          const r = React.createElement(R, reactProps, c);
+          this.$r = r; // 保存react引用
+          return ReactDOM.render(r, this.$refs.r);
         }
       },
       mounted() {
@@ -124,6 +126,7 @@ export default function (R) {
         this.renderReactComponent();
       },
       beforeDestroy() {
+        this.$r = null; // 释放$r引用
         ReactDOM.unmountComponentAtNode(this.$refs.r);
       },
       render(h) {

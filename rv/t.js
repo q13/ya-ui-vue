@@ -248,7 +248,9 @@ var C = function (_React$Component) {
               innerClass: innerClass
             }, null);
           }
-          return __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(R, reactProps, c), this.$refs.r);
+          var r = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(R, reactProps, c);
+          this.$r = r; // 保存react引用
+          return __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(r, this.$refs.r);
         }
       },
       mounted: function mounted() {
@@ -258,6 +260,7 @@ var C = function (_React$Component) {
         this.renderReactComponent();
       },
       beforeDestroy: function beforeDestroy() {
+        this.$r = null; // 释放$r引用
         __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.unmountComponentAtNode(this.$refs.r);
       },
       render: function render(h) {
