@@ -231,11 +231,14 @@ var C = function (_React$Component) {
               innerTag = _getNormalizeProps3.innerTag,
               outerClass = _getNormalizeProps3.outerClass,
               innerClass = _getNormalizeProps3.innerClass,
-              restAttrs = _objectWithoutProperties(_getNormalizeProps3, ['outerTag', 'innerTag', 'outerClass', 'innerClass']);
+              reactRef = _getNormalizeProps3.reactRef,
+              restAttrs = _objectWithoutProperties(_getNormalizeProps3, ['outerTag', 'innerTag', 'outerClass', 'innerClass', 'reactRef']);
           // 组装成react props
 
 
-          var reactProps = _extends({}, restAttrs);
+          var reactProps = _extends({}, restAttrs, {
+            ref: reactRef // 重命名react component ref
+          });
           Object.keys(listeners).forEach(function (eventName) {
             reactProps['on' + capitalize(eventName)] = listeners[eventName];
           });

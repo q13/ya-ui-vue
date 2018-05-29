@@ -96,11 +96,13 @@ export default function (R) {
             innerTag,
             outerClass,
             innerClass,
+            reactRef,
             ...restAttrs
           } = getNormalizeProps(attrs);
           // 组装成react props
           var reactProps = {
-            ...restAttrs
+            ...restAttrs,
+            ref: reactRef // 重命名react component ref
           };
           Object.keys(listeners).forEach((eventName) => {
             reactProps['on' + capitalize(eventName)] = listeners[eventName];
