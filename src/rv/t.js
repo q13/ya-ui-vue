@@ -6,7 +6,6 @@
 // } from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Vue from 'vue';
 
 var store = new Map(); // 存储转换过的组件类，不重复生成
