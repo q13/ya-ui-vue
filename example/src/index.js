@@ -17,15 +17,17 @@ import antMobile from './ant-mobile/index';
 // console.log(elementUi);
 // import test from './test/index';
 // const Vue = window.Vue;
+import YaPc from './ya/pc/index';
 const widgets = [
   // elementUi(),
   // mintUi(),
   // iviewUi(),
   // vueBeautyUi()
   // test()
-  mobile(),
+  // mobile(),
   // ant()
-  antMobile()
+  // antMobile(),
+  YaPc()
 ];
 const App = Vue.extend({
   render(h) {

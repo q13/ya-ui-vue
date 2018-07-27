@@ -11,6 +11,7 @@
     "dist": "webpack --config tools/webpack.dist.config.js",
     "graph": "webpack --config tools/webpack.graph.config.js",
     "rv": "webpack --config tools/webpack.rv.config.js",
+    "ya": "webpack --config tools/webpack.ya.config.js",
     "example": "webpack-dev-server --config tools/webpack.example.config.js"
   },
   "dependencies": {

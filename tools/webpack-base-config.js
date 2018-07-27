@@ -52,6 +52,7 @@ function getBaseConfig(configName) {
     resolve: {
       alias: {
         'deps': path.resolve(__dirname, '../src/deps'), // 依赖目录
+        'rv': path.resolve(__dirname, '../src/rv'), // 依赖目录
         'ya-ui-vue': path.resolve(__dirname, '..') // 根目录
         // 'react': 'preact-compat',
         // 'react-dom': 'preact-compat',
