@@ -3,6 +3,8 @@
  */
 import React from 'react';
 import CoreCalendar from 'antd/lib/calendar'; // eslint-disable-line
+import LocaleProvider from 'antd/lib/locale-provider'; // eslint-disable-line
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 import 'antd/lib/calendar/style/css'; // 加载 CSS
 import moment from 'moment';
 import 'moment/locale/zh-cn';
@@ -39,15 +41,11 @@ class Calendar extends React.Component {
     props.onSelect(date._d);
   }
   render() {
-    return <CoreCalendar
-      locale={{
-        month: '月',
-        year: '年'
-      }}
+    return <LocaleProvider locale={zhCN}><CoreCalendar
       fullscreen={false}
       dateFullCellRender={this.handleDatFulleCellRender}
       onSelect={this.handleSelect}
-    />;
+    /></LocaleProvider>;
   }
 }
 
