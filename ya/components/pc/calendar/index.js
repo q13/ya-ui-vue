@@ -7,7 +7,7 @@
 		exports["components/pc/calendar/index"] = factory(require("ya-ui-vue/rv/t"));
 	else
 		root["components/pc/calendar/index"] = factory(root["ya-ui-vue/rv/t"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_6__) {
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_8__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -83,14 +83,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_calendar__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_lib_calendar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_calendar_style_css__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_calendar_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd_lib_calendar_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment_locale_zh_cn__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment_locale_zh_cn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment_locale_zh_cn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rv_t__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rv_t___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rv_t__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_locale_provider__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_locale_provider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd_lib_locale_provider__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_locale_provider_zh_CN__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_locale_provider_zh_CN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_antd_lib_locale_provider_zh_CN__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_calendar_style_css__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_calendar_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_antd_lib_calendar_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment_locale_zh_cn__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment_locale_zh_cn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment_locale_zh_cn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rv_t__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rv_t___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rv_t__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -104,12 +108,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 
  // eslint-disable-line
+ // eslint-disable-line
+
  // 加载 CSS
 
 
 
 
-__WEBPACK_IMPORTED_MODULE_3_moment___default.a.locale('zh-cn');
+__WEBPACK_IMPORTED_MODULE_5_moment___default.a.locale('zh-cn');
 
 var Calendar = function (_React$Component) {
   _inherits(Calendar, _React$Component);
@@ -128,15 +134,16 @@ var Calendar = function (_React$Component) {
   _createClass(Calendar, [{
     key: 'render',
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_calendar___default.a, {
-        locale: {
-          month: '月',
-          year: '年'
-        },
-        fullscreen: false,
-        dateFullCellRender: this.handleDatFulleCellRender,
-        onSelect: this.handleSelect
-      });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_antd_lib_locale_provider___default.a,
+        { locale: __WEBPACK_IMPORTED_MODULE_3_antd_lib_locale_provider_zh_CN___default.a },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd_lib_calendar___default.a, {
+          fullscreen: false,
+          dateFullCellRender: this.handleDatFulleCellRender,
+          onSelect: this.handleSelect,
+          onPanelChange: this.handlePanelChange
+        })
+      );
     }
   }]);
 
@@ -155,14 +162,14 @@ var _initialiseProps = function _initialiseProps() {
     var props = _this2.props;
     var dateMarks = props.dateMarks;
     var theOne = dateMarks.find(function (item) {
-      return __WEBPACK_IMPORTED_MODULE_3_moment___default()(item.date).isSame(__WEBPACK_IMPORTED_MODULE_3_moment___default()(date), 'day');
+      return __WEBPACK_IMPORTED_MODULE_5_moment___default()(item.date).isSame(__WEBPACK_IMPORTED_MODULE_5_moment___default()(date), 'day');
     });
     var el = null;
     if (theOne) {
       el = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'ant-fullcalendar-value ' + theOne.className },
-        __WEBPACK_IMPORTED_MODULE_3_moment___default()(theOne.date).date()
+        __WEBPACK_IMPORTED_MODULE_5_moment___default()(theOne.date).date()
       );
     } else {
       el = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -182,9 +189,14 @@ var _initialiseProps = function _initialiseProps() {
     var props = _this2.props;
     props.onSelect(date._d);
   };
+
+  this.handlePanelChange = function (date, mode) {
+    var props = _this2.props;
+    props.onPanelChange(date._d, mode);
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_5_rv_t___default()(Calendar));
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_7_rv_t___default()(Calendar));
 
 /***/ }),
 /* 1 */
@@ -202,25 +214,37 @@ module.exports = require("antd/lib/calendar");
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("antd/lib/calendar/style/css");
+module.exports = require("antd/lib/locale-provider");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("moment");
+module.exports = require("antd/lib/locale-provider/zh_CN");
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("moment/locale/zh-cn");
+module.exports = require("antd/lib/calendar/style/css");
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
+module.exports = require("moment");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("moment/locale/zh-cn");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
 
 /***/ })
 /******/ ]);

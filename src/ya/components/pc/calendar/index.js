@@ -40,11 +40,16 @@ class Calendar extends React.Component {
     const props = this.props;
     props.onSelect(date._d);
   }
+  handlePanelChange = (date, mode) => {
+    const props = this.props;
+    props.onPanelChange(date._d, mode);
+  }
   render() {
     return <LocaleProvider locale={zhCN}><CoreCalendar
       fullscreen={false}
       dateFullCellRender={this.handleDatFulleCellRender}
       onSelect={this.handleSelect}
+      onPanelChange={this.handlePanelChange}
     /></LocaleProvider>;
   }
 }

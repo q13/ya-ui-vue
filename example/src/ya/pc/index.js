@@ -5,7 +5,7 @@ import Calendar from '../../../../src/ya/components/pc/calendar/index';
 export default function () {
   return {
     template: `<div>
-      <calendar :dateMarks="dateMarks" @select="handleSelect"></calendar>
+      <calendar :dateMarks="dateMarks" @select="handleSelect" @panelChange="handlePanelChange"></calendar>
     </div>`,
     data() {
       return {
@@ -21,6 +21,10 @@ export default function () {
     methods: {
       handleSelect(d) {
         console.log('date', d);
+      },
+      handlePanelChange(d, mode) {
+        console.log('date', d);
+        console.log('mode', mode);
       }
     }
   };
